@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion'
-import { Calendar } from 'lucide-react'
-import { format } from 'date-fns'
+import { format } from "date-fns";
+import { motion } from "framer-motion";
+import { Calendar } from "lucide-react";
 
 interface LastUpdatedProps {
-  date: string
+  date: string;
 }
 
 export function LastUpdated({ date }: LastUpdatedProps) {
-  const formattedDate = format(new Date(date), 'MMMM d, yyyy')
+  const formattedDate = format(new Date(date), "MMMM d, yyyy");
 
   return (
     <motion.div
@@ -20,11 +20,15 @@ export function LastUpdated({ date }: LastUpdatedProps) {
     >
       <motion.div
         animate={{ rotate: [0, 5, -5, 0] }}
-        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
+        transition={{
+          duration: 2,
+          repeat: Number.POSITIVE_INFINITY,
+          repeatDelay: 3,
+        }}
       >
         <Calendar className="h-4 w-4 mr-2" />
       </motion.div>
       Last updated: {formattedDate}
     </motion.div>
-  )
+  );
 }

@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { ChevronRight, Home } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ChevronRight, Home } from "lucide-react";
+import Link from "next/link";
 
 interface BreadcrumbItem {
-  label: string
-  href: string
+  label: string;
+  href: string;
 }
 
 interface BreadcrumbProps {
-  items: BreadcrumbItem[]
+  items: BreadcrumbItem[];
 }
 
 export function Breadcrumb({ items }: BreadcrumbProps) {
@@ -44,5 +44,5 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
         </motion.div>
       ))}
     </motion.nav>
-  )
+  );
 }

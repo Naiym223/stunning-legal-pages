@@ -1,18 +1,20 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Contact Information',
-  description: 'Get in touch with our legal team for support, questions, or compliance assistance.',
+  title: "Contact Information",
+  description:
+    "Get in touch with our Faithlingo support team for help with your spiritual growth journey.",
   openGraph: {
-    title: 'Contact Information - Legal Pages',
-    description: 'Get in touch with our legal team for support, questions, or compliance assistance.',
-  }
-}
+    title: "Contact Information - Faithlingo",
+    description:
+      "Get in touch with our Faithlingo support team for help with your spiritual growth journey.",
+  },
+};
 
 export default function ContactLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return children
+  return children;
 }

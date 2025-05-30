@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { FileText, Mail, Phone, MapPin, ExternalLink } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ExternalLink, FileText, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 
 const legalLinks = [
-  { href: '/privacy-policy', label: 'Privacy Policy' },
-  { href: '/terms-of-service', label: 'Terms of Service' },
-  { href: '/cookie-policy', label: 'Cookie Policy' },
-  { href: '/data-security', label: 'Data Security' },
-  { href: '/accessibility', label: 'Accessibility' },
-]
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-of-service", label: "Terms of Service" },
+  { href: "/cookie-policy", label: "Cookie Policy" },
+  { href: "/data-security", label: "Data Security" },
+  { href: "/accessibility", label: "Accessibility" },
+];
 
 const policyLinks = [
-  { href: '/refund-policy', label: 'Refund Policy' },
-  { href: '/disclaimer', label: 'Disclaimer' },
-  { href: '/user-conduct', label: 'User Conduct' },
-  { href: '/intellectual-property', label: 'Intellectual Property' },
-  { href: '/contact', label: 'Contact Information' },
-]
+  { href: "/refund-policy", label: "Refund Policy" },
+  { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/user-conduct", label: "User Conduct" },
+  { href: "/intellectual-property", label: "Intellectual Property" },
+  { href: "/contact", label: "Contact Information" },
+];
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-white/95 backdrop-blur-lg border-t border-white/20 mt-20">
@@ -43,7 +43,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-600 text-sm">
-              A spiritual growth platform helping believers deepen their faith through daily lessons, prayer, and biblical content.
+              A spiritual growth platform helping believers deepen their faith
+              through daily lessons, prayer, and biblical content.
             </p>
             <div className="space-y-2 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
@@ -56,7 +57,14 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <ExternalLink className="h-4 w-4" />
-                <span><a href="https://valoriya.org" className="text-gray-600 hover:text-blue-600">valoriya.org</a></span>
+                <span>
+                  <a
+                    href="https://valoriya.org"
+                    className="text-gray-600 hover:text-blue-600"
+                  >
+                    valoriya.org
+                  </a>
+                </span>
               </div>
             </div>
           </motion.div>
@@ -68,7 +76,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-semibold text-gray-900">Legal Documents</h3>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Legal Documents
+            </h3>
             <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.href}>
@@ -114,7 +124,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-semibold text-gray-900">Last Updated</h3>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Last Updated
+            </h3>
             <div className="space-y-2 text-sm text-gray-600">
               <div>Privacy Policy: December 1, 2024</div>
               <div>Terms of Service: December 1, 2024</div>
@@ -140,7 +152,8 @@ export function Footer() {
           className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-sm text-gray-600">
-            © {currentYear} Valoriya. All rights reserved. Faithlingo is a product of Valoriya.
+            © {currentYear} Valoriya. All rights reserved. Faithlingo is a
+            product of Valoriya.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-xs text-gray-500">
@@ -150,5 +163,5 @@ export function Footer() {
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

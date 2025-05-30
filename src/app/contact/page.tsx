@@ -1,56 +1,66 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Breadcrumb } from '@/components/breadcrumb'
-import { Phone, Mail, MapPin, Clock, MessageSquare, Shield, FileText, Users, Globe } from 'lucide-react'
+import { Breadcrumb } from "@/components/breadcrumb";
+import { motion } from "framer-motion";
+import {
+  Clock,
+  FileText,
+  Globe,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Phone,
+  Shield,
+  Users,
+} from "lucide-react";
 
 const contactMethods = [
   {
     icon: Mail,
-    title: 'Email Support',
-    description: 'Get help with Faithlingo and spiritual growth questions',
-    value: 'support@walkwithchrist.shop',
-    action: 'mailto:support@walkwithchrist.shop',
-    color: 'from-blue-500 to-blue-600'
+    title: "Email Support",
+    description: "Get help with Faithlingo and spiritual growth questions",
+    value: "support@walkwithchrist.shop",
+    action: "mailto:support@walkwithchrist.shop",
+    color: "from-blue-500 to-blue-600",
   },
   {
     icon: MessageSquare,
-    title: 'Support Tickets',
-    description: 'Create detailed support tickets for technical issues',
-    value: 'Visit our help desk portal',
-    action: 'https://support.faithlybible.com',
-    color: 'from-green-500 to-green-600'
+    title: "Support Tickets",
+    description: "Create detailed support tickets for technical issues",
+    value: "Visit our help desk portal",
+    action: "https://support.faithlybible.com",
+    color: "from-green-500 to-green-600",
   },
   {
     icon: Globe,
-    title: 'Main Website',
-    description: 'Visit our main company website for more information',
-    value: 'valoriya.org',
-    action: 'https://valoriya.org',
-    color: 'from-purple-500 to-purple-600'
-  }
-]
+    title: "Main Website",
+    description: "Visit our main company website for more information",
+    value: "valoriya.org",
+    action: "https://valoriya.org",
+    color: "from-purple-500 to-purple-600",
+  },
+];
 
 const departments = [
   {
     icon: Shield,
-    title: 'Privacy & Data Protection',
-    email: 'support@walkwithchrist.shop',
-    description: 'Privacy policy and data protection questions'
+    title: "Privacy & Data Protection",
+    email: "support@walkwithchrist.shop",
+    description: "Privacy policy and data protection questions",
   },
   {
     icon: FileText,
-    title: 'App Support',
-    email: 'support@walkwithchrist.shop',
-    description: 'Faithlingo app features and spiritual content'
+    title: "App Support",
+    email: "support@walkwithchrist.shop",
+    description: "Faithlingo app features and spiritual content",
   },
   {
     icon: Users,
-    title: 'General Support',
-    email: 'support@walkwithchrist.shop',
-    description: 'Account issues and general inquiries'
-  }
-]
+    title: "General Support",
+    email: "support@walkwithchrist.shop",
+    description: "Account issues and general inquiries",
+  },
+];
 
 export default function ContactPage() {
   return (
@@ -64,13 +74,13 @@ export default function ContactPage() {
         >
           {/* Header */}
           <div className="text-center">
-            <Breadcrumb 
+            <Breadcrumb
               items={[
-                { label: 'Home', href: '/' },
-                { label: 'Contact Information', href: '/contact' }
-              ]} 
+                { label: "Home", href: "/" },
+                { label: "Contact Information", href: "/contact" },
+              ]}
             />
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -84,8 +94,9 @@ export default function ContactPage() {
                 Contact Information
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get in touch with our Faithlingo support team for help with your spiritual growth journey. 
-                We're here to help you navigate your faith and app features.
+                Get in touch with our Faithlingo support team for help with your
+                spiritual growth journey. We're here to help you navigate your
+                faith and app features.
               </p>
             </motion.div>
           </div>
@@ -98,7 +109,7 @@ export default function ContactPage() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {contactMethods.map((method, index) => {
-              const Icon = method.icon
+              const Icon = method.icon;
               return (
                 <motion.a
                   key={method.title}
@@ -109,23 +120,23 @@ export default function ContactPage() {
                   whileHover={{ scale: 1.02, y: -8 }}
                   className="glass-card rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 group"
                 >
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${method.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${method.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <Icon className="h-8 w-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {method.title}
                   </h3>
-                  
-                  <p className="text-gray-600 mb-4">
-                    {method.description}
-                  </p>
-                  
+
+                  <p className="text-gray-600 mb-4">{method.description}</p>
+
                   <p className="text-lg font-semibold text-blue-600">
                     {method.value}
                   </p>
                 </motion.a>
-              )
+              );
             })}
           </motion.section>
 
@@ -143,18 +154,29 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 mr-3 text-blue-600" />
                   Business Information
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Company Information</h3>
+                    <h3 className="font-semibold text-gray-800 mb-2">
+                      Company Information
+                    </h3>
                     <p className="text-gray-600">
-                      Valoriya<br />
-                      Makers of Faithlingo<br />
-                      Website: <a href="https://valoriya.org" className="text-blue-600 hover:text-blue-700">https://valoriya.org</a><br />
+                      Valoriya
+                      <br />
+                      Makers of Faithlingo
+                      <br />
+                      Website:{" "}
+                      <a
+                        href="https://valoriya.org"
+                        className="text-blue-600 hover:text-blue-700"
+                      >
+                        https://valoriya.org
+                      </a>
+                      <br />
                       United States
                     </p>
                   </div>
-                  
+
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-2 flex items-center">
                       <Clock className="h-4 w-4 mr-2" />
@@ -169,12 +191,16 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Support Channels</h3>
+                    <h3 className="font-semibold text-gray-800 mb-2">
+                      Support Channels
+                    </h3>
                     <p className="text-gray-600">
-                      Email: General inquiries and quick questions<br />
-                      Help Desk: Detailed support tickets and technical issues<br />
+                      Email: General inquiries and quick questions
+                      <br />
+                      Help Desk: Detailed support tickets and technical issues
+                      <br />
                       Website: Additional resources and information
                     </p>
                   </div>
@@ -186,10 +212,10 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Department Contacts
                 </h2>
-                
+
                 <div className="space-y-6">
                   {departments.map((dept, index) => {
-                    const Icon = dept.icon
+                    const Icon = dept.icon;
                     return (
                       <motion.div
                         key={dept.title}
@@ -202,9 +228,13 @@ export default function ContactPage() {
                           <Icon className="h-5 w-5 text-blue-600" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-gray-800">{dept.title}</h4>
-                          <p className="text-sm text-gray-600 mb-1">{dept.description}</p>
-                          <a 
+                          <h4 className="font-semibold text-gray-800">
+                            {dept.title}
+                          </h4>
+                          <p className="text-sm text-gray-600 mb-1">
+                            {dept.description}
+                          </p>
+                          <a
                             href={`mailto:${dept.email}`}
                             className="text-sm text-blue-600 hover:text-blue-700 transition-colors duration-200"
                           >
@@ -212,7 +242,7 @@ export default function ContactPage() {
                           </a>
                         </div>
                       </motion.div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -238,15 +268,35 @@ export default function ContactPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <div className="text-left">
-                  <h3 className="font-semibold text-blue-900 mb-2">For General Questions:</h3>
+                  <h3 className="font-semibold text-blue-900 mb-2">
+                    For General Questions:
+                  </h3>
                   <p className="text-sm text-blue-700">
-                    Email us at <a href="mailto:support@walkwithchrist.shop" className="underline">support@walkwithchrist.shop</a> for quick answers about Faithlingo features, account questions, or spiritual guidance.
+                    Email us at{" "}
+                    <a
+                      href="mailto:support@walkwithchrist.shop"
+                      className="underline"
+                    >
+                      support@walkwithchrist.shop
+                    </a>{" "}
+                    for quick answers about Faithlingo features, account
+                    questions, or spiritual guidance.
                   </p>
                 </div>
                 <div className="text-left">
-                  <h3 className="font-semibold text-blue-900 mb-2">For Technical Issues:</h3>
+                  <h3 className="font-semibold text-blue-900 mb-2">
+                    For Technical Issues:
+                  </h3>
                   <p className="text-sm text-blue-700">
-                    Create a support ticket at <a href="https://support.faithlybible.com" className="underline">our help desk</a> for detailed technical problems, bug reports, or feature requests.
+                    Create a support ticket at{" "}
+                    <a
+                      href="https://support.faithlybible.com"
+                      className="underline"
+                    >
+                      our help desk
+                    </a>{" "}
+                    for detailed technical problems, bug reports, or feature
+                    requests.
                   </p>
                 </div>
               </div>
@@ -265,20 +315,36 @@ export default function ContactPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">Faithlingo App</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">
+                  Faithlingo App
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Download our spiritual growth app:<br />
-                  Available on iOS and Android<br />
-                  Features daily lessons, prayer tracking, and community<br />
+                  Download our spiritual growth app:
+                  <br />
+                  Available on iOS and Android
+                  <br />
+                  Features daily lessons, prayer tracking, and community
+                  <br />
                   Visit our main website for download links
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">Company Information</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">
+                  Company Information
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Valoriya - makers of Faithlingo<br />
-                  Website: <a href="https://valoriya.org" className="text-blue-600 hover:text-blue-700">https://valoriya.org</a><br />
-                  Supporting your spiritual growth journey<br />
+                  Valoriya - makers of Faithlingo
+                  <br />
+                  Website:{" "}
+                  <a
+                    href="https://valoriya.org"
+                    className="text-blue-600 hover:text-blue-700"
+                  >
+                    https://valoriya.org
+                  </a>
+                  <br />
+                  Supporting your spiritual growth journey
+                  <br />
                   Connect with fellow believers
                 </p>
               </div>
@@ -287,5 +353,5 @@ export default function ContactPage() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

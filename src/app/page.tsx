@@ -188,7 +188,7 @@ export default function HomePage() {
               >
                 <Link href="/contact" className="btn-secondary inline-flex items-center">
                   <Phone className="h-5 w-5 mr-2" />
-                  Contact Legal Team
+                  Contact Support Team
                 </Link>
               </motion.div>
             </div>

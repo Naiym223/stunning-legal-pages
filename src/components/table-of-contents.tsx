@@ -1,57 +1,57 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { List, ChevronRight } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ChevronRight, List } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface Section {
-  id: string
-  title: string
-  level: number
+  id: string;
+  title: string;
+  level: number;
 }
 
 interface TableOfContentsProps {
-  sections: Section[]
+  sections: Section[];
 }
 
 export function TableOfContents({ sections }: TableOfContentsProps) {
-  const [activeSection, setActiveSection] = useState<string>('')
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
         }
       },
       {
-        rootMargin: '-20% 0% -80% 0%',
-        threshold: 0
-      }
-    )
+        rootMargin: "-20% 0% -80% 0%",
+        threshold: 0,
+      },
+    );
 
     for (const section of sections) {
-      const element = document.getElementById(section.id)
+      const element = document.getElementById(section.id);
       if (element) {
-        observer.observe(element)
+        observer.observe(element);
       }
     }
 
-    return () => observer.disconnect()
-  }, [sections])
+    return () => observer.disconnect();
+  }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 100
+      const offsetTop = element.offsetTop - 100;
       window.scrollTo({
         top: offsetTop,
-        behavior: 'smooth'
-      })
+        behavior: "smooth",
+      });
     }
-  }
+  };
 
   return (
     <motion.div
@@ -64,7 +64,7 @@ export function TableOfContents({ sections }: TableOfContentsProps) {
         <List className="h-5 w-5 text-blue-600 mr-2" />
         <h3 className="font-semibold text-gray-900">Table of Contents</h3>
       </div>
-      
+
       <nav className="space-y-1">
         {sections.map((section, index) => (
           <motion.button
@@ -75,25 +75,27 @@ export function TableOfContents({ sections }: TableOfContentsProps) {
             onClick={() => scrollToSection(section.id)}
             className={`w-full text-left p-2 rounded-lg transition-all duration-200 flex items-center group ${
               activeSection === section.id
-                ? 'bg-blue-100 text-blue-700 shadow-sm'
-                : 'hover:bg-gray-100 text-gray-600 hover:text-gray-900'
-            } ${section.level === 2 ? 'ml-4 text-sm' : ''}`}
+                ? "bg-blue-100 text-blue-700 shadow-sm"
+                : "hover:bg-gray-100 text-gray-600 hover:text-gray-900"
+            } ${section.level === 2 ? "ml-4 text-sm" : ""}`}
           >
-            <ChevronRight 
+            <ChevronRight
               className={`h-3 w-3 mr-2 transition-transform duration-200 ${
-                activeSection === section.id ? 'rotate-90' : 'group-hover:translate-x-0.5'
-              }`} 
+                activeSection === section.id
+                  ? "rotate-90"
+                  : "group-hover:translate-x-0.5"
+              }`}
             />
             <span className="truncate">{section.title}</span>
           </motion.button>
         ))}
       </nav>
-      
+
       <div className="mt-6 pt-4 border-t border-gray-200">
         <p className="text-xs text-gray-500">
           Click any section to jump directly to it
         </p>
       </div>
     </motion.div>
-  )
+  );
 }

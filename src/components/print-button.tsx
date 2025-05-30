@@ -1,18 +1,20 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion'
-import { Printer, Download } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Download, Printer } from "lucide-react";
 
 export function PrintButton() {
   const handlePrint = () => {
-    window.print()
-  }
+    window.print();
+  };
 
   const handleDownload = () => {
     // In a real implementation, this would generate and download a PDF
     // For now, we'll show an alert
-    alert('PDF download functionality would be implemented here using a library like Puppeteer or jsPDF')
-  }
+    alert(
+      "PDF download functionality would be implemented here using a library like Puppeteer or jsPDF",
+    );
+  };
 
   return (
     <div className="flex items-center space-x-2">
@@ -25,7 +27,7 @@ export function PrintButton() {
         <Printer className="h-4 w-4 mr-2" />
         Print
       </motion.button>
-      
+
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -36,5 +38,5 @@ export function PrintButton() {
         Download PDF
       </motion.button>
     </div>
-  )
+  );
 }

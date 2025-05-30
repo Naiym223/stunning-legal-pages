@@ -1,66 +1,173 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Search, X, FileText } from 'lucide-react'
-import Link from 'next/link'
+import { AnimatePresence, motion } from "framer-motion";
+import { FileText, Search, X } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 const searchableContent = [
-  { title: 'Privacy Policy', href: '/privacy-policy', keywords: ['privacy', 'data', 'personal information', 'gdpr', 'ccpa', 'collection', 'processing'] },
-  { title: 'Terms of Service', href: '/terms-of-service', keywords: ['terms', 'conditions', 'agreement', 'service', 'user obligations', 'liability'] },
-  { title: 'Cookie Policy', href: '/cookie-policy', keywords: ['cookies', 'tracking', 'analytics', 'consent', 'preferences', 'opt-out'] },
-  { title: 'Data Security Policy', href: '/data-security', keywords: ['security', 'protection', 'encryption', 'breach', 'safeguards', 'protocols'] },
-  { title: 'Accessibility Statement', href: '/accessibility', keywords: ['accessibility', 'ada', 'compliance', 'disabilities', 'accommodations', 'wcag'] },
-  { title: 'Refund Policy', href: '/refund-policy', keywords: ['refund', 'return', 'cancellation', 'payment', 'billing', 'reimbursement'] },
-  { title: 'Disclaimer', href: '/disclaimer', keywords: ['disclaimer', 'liability', 'accuracy', 'warranty', 'responsibility', 'limitation'] },
-  { title: 'User Conduct Policy', href: '/user-conduct', keywords: ['conduct', 'behavior', 'prohibited', 'acceptable use', 'enforcement', 'violations'] },
-  { title: 'Intellectual Property', href: '/intellectual-property', keywords: ['copyright', 'trademark', 'dmca', 'intellectual property', 'content', 'infringement'] },
-  { title: 'Contact Information', href: '/contact', keywords: ['contact', 'support', 'legal', 'address', 'phone', 'email'] },
-]
+  {
+    title: "Privacy Policy",
+    href: "/privacy-policy",
+    keywords: [
+      "privacy",
+      "data",
+      "personal information",
+      "gdpr",
+      "ccpa",
+      "collection",
+      "processing",
+    ],
+  },
+  {
+    title: "Terms of Service",
+    href: "/terms-of-service",
+    keywords: [
+      "terms",
+      "conditions",
+      "agreement",
+      "service",
+      "user obligations",
+      "liability",
+    ],
+  },
+  {
+    title: "Cookie Policy",
+    href: "/cookie-policy",
+    keywords: [
+      "cookies",
+      "tracking",
+      "analytics",
+      "consent",
+      "preferences",
+      "opt-out",
+    ],
+  },
+  {
+    title: "Data Security Policy",
+    href: "/data-security",
+    keywords: [
+      "security",
+      "protection",
+      "encryption",
+      "breach",
+      "safeguards",
+      "protocols",
+    ],
+  },
+  {
+    title: "Accessibility Statement",
+    href: "/accessibility",
+    keywords: [
+      "accessibility",
+      "ada",
+      "compliance",
+      "disabilities",
+      "accommodations",
+      "wcag",
+    ],
+  },
+  {
+    title: "Refund Policy",
+    href: "/refund-policy",
+    keywords: [
+      "refund",
+      "return",
+      "cancellation",
+      "payment",
+      "billing",
+      "reimbursement",
+    ],
+  },
+  {
+    title: "Disclaimer",
+    href: "/disclaimer",
+    keywords: [
+      "disclaimer",
+      "liability",
+      "accuracy",
+      "warranty",
+      "responsibility",
+      "limitation",
+    ],
+  },
+  {
+    title: "User Conduct Policy",
+    href: "/user-conduct",
+    keywords: [
+      "conduct",
+      "behavior",
+      "prohibited",
+      "acceptable use",
+      "enforcement",
+      "violations",
+    ],
+  },
+  {
+    title: "Intellectual Property",
+    href: "/intellectual-property",
+    keywords: [
+      "copyright",
+      "trademark",
+      "dmca",
+      "intellectual property",
+      "content",
+      "infringement",
+    ],
+  },
+  {
+    title: "Contact Information",
+    href: "/contact",
+    keywords: ["contact", "support", "legal", "address", "phone", "email"],
+  },
+];
 
 export function SearchBar() {
-  const [query, setQuery] = useState('')
-  const [results, setResults] = useState<typeof searchableContent>([])
-  const [isOpen, setIsOpen] = useState(false)
-  const [focused, setFocused] = useState(false)
-  const inputRef = useRef<HTMLInputElement>(null)
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<typeof searchableContent>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (query.trim()) {
-      const filtered = searchableContent.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))
-      )
-      setResults(filtered)
-      setIsOpen(true)
+      const filtered = searchableContent.filter(
+        (item) =>
+          item.title.toLowerCase().includes(query.toLowerCase()) ||
+          item.keywords.some((keyword) =>
+            keyword.toLowerCase().includes(query.toLowerCase()),
+          ),
+      );
+      setResults(filtered);
+      setIsOpen(true);
     } else {
-      setResults([])
-      setIsOpen(false)
+      setResults([]);
+      setIsOpen(false);
     }
-  }, [query])
+  }, [query]);
 
   const handleClear = () => {
-    setQuery('')
-    setResults([])
-    setIsOpen(false)
-    inputRef.current?.focus()
-  }
+    setQuery("");
+    setResults([]);
+    setIsOpen(false);
+    inputRef.current?.focus();
+  };
 
   const handleResultClick = () => {
-    setQuery('')
-    setResults([])
-    setIsOpen(false)
-    setFocused(false)
-  }
+    setQuery("");
+    setResults([]);
+    setIsOpen(false);
+    setFocused(false);
+  };
 
   return (
     <div className="relative max-w-2xl mx-auto">
       <motion.div
         animate={{
           scale: focused ? 1.02 : 1,
-          boxShadow: focused 
-            ? '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-            : '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+          boxShadow: focused
+            ? "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            : "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         }}
         transition={{ duration: 0.3 }}
         className="relative"
@@ -126,7 +233,7 @@ export function SearchBar() {
                         {result.title}
                       </h4>
                       <p className="text-sm text-gray-500">
-                        {result.keywords.slice(0, 3).join(', ')}
+                        {result.keywords.slice(0, 3).join(", ")}
                       </p>
                     </div>
                   </Link>
@@ -151,12 +258,13 @@ export function SearchBar() {
               <Search className="h-8 w-8 text-gray-400 mx-auto mb-2" />
               <p className="text-gray-600">No documents found for "{query}"</p>
               <p className="text-sm text-gray-500 mt-1">
-                Try searching for terms like "privacy", "terms", "cookies", or "security"
+                Try searching for terms like "privacy", "terms", "cookies", or
+                "security"
               </p>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
