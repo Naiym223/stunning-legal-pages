@@ -22,7 +22,7 @@ const legalDocuments = [
   {
     id: 'privacy-policy',
     title: 'Privacy Policy',
-    description: 'Comprehensive privacy protection and data handling practices compliant with GDPR, CCPA, and NY state requirements.',
+    description: 'Comprehensive privacy protection and data handling practices compliant with GDPR, CCPA, and applicable regulations.',
     icon: Shield,
     href: '/privacy-policy',
     color: 'from-blue-500 to-blue-600',
@@ -32,7 +32,7 @@ const legalDocuments = [
   {
     id: 'terms-of-service',
     title: 'Terms of Service',
-    description: 'Detailed terms and conditions governing the use of our services, meeting all New York legal standards.',
+    description: 'Detailed terms and conditions governing the use of our spiritual growth services and platform.',
     icon: FileText,
     href: '/terms-of-service',
     color: 'from-indigo-500 to-indigo-600',
@@ -167,8 +167,8 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive legal documentation designed with stunning visuals and smooth animations. 
-              All documents meet New York state requirements and federal compliance standards.
+              Comprehensive legal documentation for Faithlingo designed with stunning visuals and smooth animations. 
+              All documents meet applicable legal standards and regulatory compliance requirements.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
@@ -318,8 +318,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'NY State Compliant',
-                description: 'All documents meet New York state legal requirements and federal regulations.',
+                title: 'Legally Compliant',
+                description: 'All documents meet applicable legal requirements and federal regulations.',
                 icon: Shield,
                 color: 'from-blue-500 to-blue-600'
               },
