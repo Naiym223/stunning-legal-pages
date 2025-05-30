@@ -39,24 +39,24 @@ export function Footer() {
                 <FileText className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold gradient-text">
-                Legal Pages
+                Faithlingo
               </span>
             </div>
             <p className="text-gray-600 text-sm">
-              Comprehensive legal documentation ensuring compliance with New York state requirements and federal regulations.
+              A spiritual growth platform helping believers deepen their faith through daily lessons, prayer, and biblical content.
             </p>
             <div className="space-y-2 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>New York, NY, United States</span>
+                <span>United States</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>legal@legalpages.com</span>
+                <span>support@walkwithchrist.shop</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <ExternalLink className="h-4 w-4" />
+                <span><a href="https://valoriya.org" className="text-gray-600 hover:text-blue-600">valoriya.org</a></span>
               </div>
             </div>
           </motion.div>
@@ -140,7 +140,7 @@ export function Footer() {
           className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-sm text-gray-600">
-            © {currentYear} Legal Pages. All rights reserved. This website complies with NY state legal requirements.
+            © {currentYear} Valoriya. All rights reserved. Faithlingo is a product of Valoriya.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-xs text-gray-500">

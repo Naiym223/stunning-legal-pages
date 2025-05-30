@@ -20,11 +20,11 @@ export function TableOfContents({ sections }: TableOfContentsProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        for (const entry of entries) {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id)
           }
-        })
+        }
       },
       {
         rootMargin: '-20% 0% -80% 0%',
@@ -32,12 +32,12 @@ export function TableOfContents({ sections }: TableOfContentsProps) {
       }
     )
 
-    sections.forEach((section) => {
+    for (const section of sections) {
       const element = document.getElementById(section.id)
       if (element) {
         observer.observe(element)
       }
-    })
+    }
 
     return () => observer.disconnect()
   }, [sections])

@@ -71,8 +71,8 @@ export default function TermsOfServicePage() {
                     Terms of Service
                   </h1>
                   <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    These terms govern your use of our services and establish the legal relationship 
-                    between you and Legal Pages. Please read carefully.
+                    These terms govern your use of Faithlingo and establish the legal relationship 
+                    between you and Valoriya. Please read carefully.
                   </p>
                 </motion.div>
 
@@ -96,10 +96,10 @@ export default function TermsOfServicePage() {
                     Acceptance of Terms
                   </motion.h2>
                   <p>
-                    By accessing, browsing, or using the Legal Pages website and services ("Service"), 
+                    By accessing, browsing, or using the Faithlingo app, Valoriya website, and spiritual growth services ("Service"), 
                     you acknowledge that you have read, understood, and agree to be bound by these 
                     Terms of Service ("Terms"). These Terms constitute a legally binding agreement 
-                    between you ("User" or "you") and Legal Pages ("we," "us," or "our").
+                    between you ("User" or "you") and Valoriya ("we," "us," or "our").
                   </p>
                   <p>
                     If you do not agree to these Terms, you must not access or use our Service. 
@@ -118,20 +118,20 @@ export default function TermsOfServicePage() {
                     Description of Service
                   </motion.h2>
                   <p>
-                    Legal Pages provides comprehensive legal documentation, templates, and 
-                    compliance information designed to meet various legal requirements. Our Service includes:
+                    Faithlingo provides a spiritual growth platform designed to help users deepen their faith 
+                    through daily lessons, prayer, and biblical content. Our Service includes:
                   </p>
                   <ul>
-                    <li>Access to legal document templates and policies</li>
-                    <li>Compliance guidance and legal information</li>
-                    <li>Document customization and generation tools</li>
-                    <li>Legal updates and notifications</li>
-                    <li>Customer support and consultation services</li>
+                    <li>Daily faith-based lessons and spiritual growth content</li>
+                    <li>Prayer tracking and spiritual reflection tools</li>
+                    <li>Biblical study materials and devotionals</li>
+                    <li>Community features for connecting with fellow believers</li>
+                    <li>Customer support and spiritual guidance resources</li>
                   </ul>
                   <p>
-                    <strong>Important:</strong> Our Service provides information and templates but does not 
-                    constitute legal advice. We recommend consulting with qualified legal professionals 
-                    for specific legal matters.
+                    <strong>Important:</strong> Our Service provides spiritual guidance and faith-based content but does not 
+                    constitute professional religious counseling. We recommend consulting with qualified spiritual leaders 
+                    or religious professionals for personal spiritual matters.
                   </p>
                 </section>
 
@@ -171,9 +171,10 @@ export default function TermsOfServicePage() {
                   <p>When using our Service, you agree to:</p>
                   <ul>
                     <li>Use the Service only for lawful purposes and in accordance with these Terms</li>
-                    <li>Respect the intellectual property rights of Legal Pages and third parties</li>
+                    <li>Respect the intellectual property rights of Valoriya and third parties</li>
                     <li>Provide accurate information and keep your account information updated</li>
                     <li>Maintain the security and confidentiality of your account</li>
+                    <li>Use the platform in a manner consistent with Christian values and respect for others</li>
                     <li>Comply with all applicable laws and regulations</li>
                   </ul>
 
@@ -204,7 +205,7 @@ export default function TermsOfServicePage() {
                   </motion.h2>
                   <p>
                     The Service and its original content, features, and functionality are owned by 
-                    Legal Pages and are protected by international copyright, trademark, patent, 
+                    Valoriya and are protected by international copyright, trademark, patent, 
                     trade secret, and other intellectual property laws.
                   </p>
                   <p>
@@ -354,7 +355,7 @@ export default function TermsOfServicePage() {
                     Indemnification
                   </motion.h2>
                   <p>
-                    You agree to indemnify and hold harmless Legal Pages from any claims arising from 
+                    You agree to indemnify and hold harmless Valoriya from any claims arising from 
                     your use of the Service, violation of these Terms, or infringement of any third-party rights.
                   </p>
                 </section>
@@ -421,11 +422,14 @@ export default function TermsOfServicePage() {
                   </p>
                   <div className="bg-indigo-50 rounded-xl p-6 mt-4">
                     <ul className="space-y-2">
-                      <li><strong>Email:</strong> legal@legalpages.com</li>
-                      <li><strong>Phone:</strong> +1 (555) 123-4567</li>
-                      <li><strong>Address:</strong> 123 Legal Street, New York, NY 10001</li>
-                      <li><strong>Business Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM EST</li>
+                      <li><strong>Email:</strong> support@walkwithchrist.shop</li>
+                      <li><strong>Support Tickets:</strong> <a href="https://support.faithlybible.com" className="text-blue-600 hover:text-blue-700">https://support.faithlybible.com</a></li>
+                      <li><strong>Company:</strong> Valoriya</li>
+                      <li><strong>Website:</strong> <a href="https://valoriya.org" className="text-blue-600 hover:text-blue-700">https://valoriya.org</a></li>
                     </ul>
+                    <p className="text-sm text-gray-600 mt-4">
+                      For general inquiries, email us directly. For technical support tickets, please use our help desk portal.
+                    </p>
                   </div>
                 </section>
               </div>

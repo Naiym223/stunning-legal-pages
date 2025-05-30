@@ -2,31 +2,31 @@
 
 import { motion } from 'framer-motion'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { Phone, Mail, MapPin, Clock, MessageSquare, Shield, FileText, Users } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, MessageSquare, Shield, FileText, Users, Globe } from 'lucide-react'
 
 const contactMethods = [
   {
     icon: Mail,
     title: 'Email Support',
-    description: 'Get help with legal documents and compliance questions',
-    value: 'legal@legalpages.com',
-    action: 'mailto:legal@legalpages.com',
+    description: 'Get help with Faithlingo and spiritual growth questions',
+    value: 'support@walkwithchrist.shop',
+    action: 'mailto:support@walkwithchrist.shop',
     color: 'from-blue-500 to-blue-600'
   },
   {
-    icon: Phone,
-    title: 'Phone Support',
-    description: 'Speak directly with our legal compliance team',
-    value: '+1 (555) 123-4567',
-    action: 'tel:+15551234567',
+    icon: MessageSquare,
+    title: 'Support Tickets',
+    description: 'Create detailed support tickets for technical issues',
+    value: 'Visit our help desk portal',
+    action: 'https://support.faithlybible.com',
     color: 'from-green-500 to-green-600'
   },
   {
-    icon: MessageSquare,
-    title: 'Live Chat',
-    description: 'Real-time assistance during business hours',
-    value: 'Available 9 AM - 5 PM EST',
-    action: '#',
+    icon: Globe,
+    title: 'Main Website',
+    description: 'Visit our main company website for more information',
+    value: 'valoriya.org',
+    action: 'https://valoriya.org',
     color: 'from-purple-500 to-purple-600'
   }
 ]
@@ -35,19 +35,19 @@ const departments = [
   {
     icon: Shield,
     title: 'Privacy & Data Protection',
-    email: 'privacy@legalpages.com',
-    description: 'GDPR, CCPA, and privacy compliance questions'
+    email: 'support@walkwithchrist.shop',
+    description: 'Privacy policy and data protection questions'
   },
   {
     icon: FileText,
-    title: 'Legal Documents',
-    email: 'documents@legalpages.com',
-    description: 'Document templates and legal content'
+    title: 'App Support',
+    email: 'support@walkwithchrist.shop',
+    description: 'Faithlingo app features and spiritual content'
   },
   {
     icon: Users,
     title: 'General Support',
-    email: 'support@legalpages.com',
+    email: 'support@walkwithchrist.shop',
     description: 'Account issues and general inquiries'
   }
 ]
@@ -84,8 +84,8 @@ export default function ContactPage() {
                 Contact Information
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get in touch with our legal team for support, questions, or compliance assistance. 
-                We're here to help you navigate legal requirements.
+                Get in touch with our Faithlingo support team for help with your spiritual growth journey. 
+                We're here to help you navigate your faith and app features.
               </p>
             </motion.div>
           </div>
@@ -146,11 +146,11 @@ export default function ContactPage() {
                 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Headquarters</h3>
+                    <h3 className="font-semibold text-gray-800 mb-2">Company Information</h3>
                     <p className="text-gray-600">
-                      Legal Pages, Inc.<br />
-                      123 Legal Street, Suite 456<br />
-                      New York, NY 10001<br />
+                      Valoriya<br />
+                      Makers of Faithlingo<br />
+                      Website: <a href="https://valoriya.org" className="text-blue-600 hover:text-blue-700">https://valoriya.org</a><br />
                       United States
                     </p>
                   </div>
@@ -161,20 +161,21 @@ export default function ContactPage() {
                       Business Hours
                     </h3>
                     <div className="text-gray-600 space-y-1">
-                      <p>Monday - Friday: 9:00 AM - 5:00 PM EST</p>
-                      <p>Saturday: 10:00 AM - 2:00 PM EST</p>
-                      <p>Sunday: Closed</p>
+                      <p>Email Support: Available 24/7</p>
+                      <p>Support Tickets: Monitored daily</p>
+                      <p>Response Time: Within 24 hours</p>
                       <p className="text-sm text-gray-500 mt-2">
-                        Emergency legal support available 24/7
+                        For urgent matters, please use our support ticket system
                       </p>
                     </div>
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Tax Information</h3>
+                    <h3 className="font-semibold text-gray-800 mb-2">Support Channels</h3>
                     <p className="text-gray-600">
-                      Federal EIN: 12-3456789<br />
-                      NY State Tax ID: NY-987654321
+                      Email: General inquiries and quick questions<br />
+                      Help Desk: Detailed support tickets and technical issues<br />
+                      Website: Additional resources and information
                     </p>
                   </div>
                 </div>
@@ -218,36 +219,41 @@ export default function ContactPage() {
             </div>
           </motion.section>
 
-          {/* Emergency Contact */}
+          {/* Quick Support Guide */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="bg-red-50 border border-red-200 rounded-3xl p-8"
+            className="bg-blue-50 border border-blue-200 rounded-3xl p-8"
           >
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <Phone className="h-8 w-8 text-red-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-4">
+                <MessageSquare className="h-8 w-8 text-blue-600" />
               </div>
-              <h2 className="text-2xl font-bold text-red-900 mb-4">
-                Emergency Legal Support
+              <h2 className="text-2xl font-bold text-blue-900 mb-4">
+                How to Get Support
               </h2>
-              <p className="text-red-800 mb-4">
-                For urgent legal matters requiring immediate attention, contact our 24/7 emergency line:
+              <p className="text-blue-800 mb-4">
+                Choose the best way to contact us based on your needs:
               </p>
-              <a 
-                href="tel:+15551234999"
-                className="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors duration-200"
-              >
-                +1 (555) 123-4999
-              </a>
-              <p className="text-sm text-red-700 mt-2">
-                Available 24/7 for data breaches, compliance emergencies, and urgent legal matters
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div className="text-left">
+                  <h3 className="font-semibold text-blue-900 mb-2">For General Questions:</h3>
+                  <p className="text-sm text-blue-700">
+                    Email us at <a href="mailto:support@walkwithchrist.shop" className="underline">support@walkwithchrist.shop</a> for quick answers about Faithlingo features, account questions, or spiritual guidance.
+                  </p>
+                </div>
+                <div className="text-left">
+                  <h3 className="font-semibold text-blue-900 mb-2">For Technical Issues:</h3>
+                  <p className="text-sm text-blue-700">
+                    Create a support ticket at <a href="https://support.faithlybible.com" className="underline">our help desk</a> for detailed technical problems, bug reports, or feature requests.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.section>
 
-          {/* Legal Notices */}
+          {/* Additional Resources */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -255,26 +261,25 @@ export default function ContactPage() {
             className="glass-card rounded-3xl p-8"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Legal Notices & Compliance
+              Additional Resources
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">Service of Legal Process</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">Faithlingo App</h3>
                 <p className="text-gray-600 text-sm">
-                  Legal documents should be served to:<br />
-                  Legal Pages, Inc.<br />
-                  Attn: Legal Department<br />
-                  123 Legal Street, Suite 456<br />
-                  New York, NY 10001
+                  Download our spiritual growth app:<br />
+                  Available on iOS and Android<br />
+                  Features daily lessons, prayer tracking, and community<br />
+                  Visit our main website for download links
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">Compliance Officer</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">Company Information</h3>
                 <p className="text-gray-600 text-sm">
-                  For regulatory compliance matters:<br />
-                  compliance@legalpages.com<br />
-                  Direct Line: +1 (555) 123-4568<br />
-                  Available Monday-Friday, 9 AM - 5 PM EST
+                  Valoriya - makers of Faithlingo<br />
+                  Website: <a href="https://valoriya.org" className="text-blue-600 hover:text-blue-700">https://valoriya.org</a><br />
+                  Supporting your spiritual growth journey<br />
+                  Connect with fellow believers
                 </p>
               </div>
             </div>

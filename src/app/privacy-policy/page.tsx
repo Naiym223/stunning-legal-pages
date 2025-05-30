@@ -94,13 +94,13 @@ export default function PrivacyPolicyPage() {
                     Overview
                   </motion.h2>
                   <p>
-                    This Privacy Policy describes how Legal Pages ("we," "our," or "us") collects, uses, and protects 
-                    your personal information when you visit our website or use our services. We are committed to 
+                    This Privacy Policy describes how Valoriya ("we," "our," or "us"), the company behind Faithlingo, collects, uses, and protects 
+                    your personal information when you visit our website or use our spiritual growth services. We are committed to 
                     transparency and compliance with applicable privacy laws, including the General Data Protection 
                     Regulation (GDPR), California Consumer Privacy Act (CCPA), and New York state privacy requirements.
                   </p>
                   <p>
-                    By using our website or services, you consent to the collection and use of your information as 
+                    By using our website, Faithlingo app, or spiritual growth services, you consent to the collection and use of your information as 
                     described in this policy. If you do not agree with our practices, please do not use our services.
                   </p>
                 </section>
@@ -161,13 +161,13 @@ export default function PrivacyPolicyPage() {
                   </motion.h2>
                   <p>We use your personal information for the following purposes:</p>
                   <ul>
-                    <li><strong>Service Provision:</strong> To provide, maintain, and improve our services</li>
+                    <li><strong>Service Provision:</strong> To provide, maintain, and improve Faithlingo and our spiritual growth services</li>
                     <li><strong>Communication:</strong> To respond to inquiries, send updates, and provide customer support</li>
-                    <li><strong>Personalization:</strong> To customize your experience and provide relevant content</li>
+                    <li><strong>Personalization:</strong> To customize your faith learning experience and provide relevant spiritual content</li>
                     <li><strong>Security:</strong> To protect against fraud, unauthorized access, and security threats</li>
                     <li><strong>Legal Compliance:</strong> To comply with legal obligations and protect our rights</li>
-                    <li><strong>Analytics:</strong> To understand usage patterns and improve our services</li>
-                    <li><strong>Marketing:</strong> To send promotional materials (with your consent where required)</li>
+                    <li><strong>Analytics:</strong> To understand usage patterns and improve our spiritual growth platform</li>
+                    <li><strong>Marketing:</strong> To send promotional materials about faith-based content (with your consent where required)</li>
                   </ul>
                 </section>
 
@@ -302,7 +302,7 @@ export default function PrivacyPolicyPage() {
                     Children's Privacy
                   </motion.h2>
                   <p>
-                    Our services are not intended for children under 13 years of age. We do not knowingly 
+                    Faithlingo and our spiritual growth services are not intended for children under 13 years of age. We do not knowingly 
                     collect personal information from children under 13. If we become aware that we have 
                     collected such information, we will take steps to delete it promptly.
                   </p>
@@ -320,7 +320,7 @@ export default function PrivacyPolicyPage() {
                   <p>
                     We may update this Privacy Policy periodically to reflect changes in our practices or 
                     applicable laws. We will notify you of significant changes by posting a notice on our 
-                    website or sending you an email. Your continued use of our services after such changes 
+                    website or sending you an email. Your continued use of Faithlingo and our services after such changes 
                     constitutes acceptance of the updated policy.
                   </p>
                 </section>
@@ -341,11 +341,14 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <div className="bg-blue-50 rounded-xl p-6 mt-4">
                     <ul className="space-y-2">
-                      <li><strong>Email:</strong> privacy@legalpages.com</li>
-                      <li><strong>Phone:</strong> +1 (555) 123-4567</li>
-                      <li><strong>Address:</strong> 123 Legal Street, New York, NY 10001</li>
-                      <li><strong>Data Protection Officer:</strong> dpo@legalpages.com</li>
+                      <li><strong>Email:</strong> support@walkwithchrist.shop</li>
+                      <li><strong>Support Tickets:</strong> <a href="https://support.faithlybible.com" className="text-blue-600 hover:text-blue-700">https://support.faithlybible.com</a></li>
+                      <li><strong>Company:</strong> Valoriya</li>
+                      <li><strong>Website:</strong> <a href="https://valoriya.org" className="text-blue-600 hover:text-blue-700">https://valoriya.org</a></li>
                     </ul>
+                    <p className="text-sm text-gray-600 mt-4">
+                      For general inquiries, email us directly. For technical support tickets, please use our help desk portal.
+                    </p>
                   </div>
                 </section>
               </div>

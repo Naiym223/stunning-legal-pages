@@ -56,7 +56,7 @@ export function Navigation() {
               <FileText className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold gradient-text">
-              Legal Pages
+              Faithlingo
             </span>
           </Link>
 
@@ -75,7 +75,7 @@ export function Navigation() {
             {/* Legal Pages Dropdown */}
             <div className="relative group">
               <button className="px-4 py-2 rounded-lg transition-all duration-200 hover:bg-white/50 flex items-center">
-                Legal Documents
+                Legal Pages
                 <svg className="ml-1 h-4 w-4 transform group-hover:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>

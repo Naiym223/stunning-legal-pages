@@ -14,35 +14,35 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Legal Pages',
-    default: 'Legal Pages - Comprehensive Legal Documentation'
+    template: '%s | Faithlingo Legal',
+    default: 'Faithlingo Legal - Privacy Policy & Terms of Service'
   },
-  description: 'Comprehensive legal documentation including privacy policy, terms of service, and compliance information meeting New York state requirements.',
-  keywords: ['legal', 'privacy policy', 'terms of service', 'compliance', 'GDPR', 'CCPA', 'NY legal requirements'],
-  authors: [{ name: 'Legal Team' }],
-  creator: 'Legal Pages Site',
-  publisher: 'Legal Pages',
+  description: 'Legal documentation for Faithlingo spiritual growth app including privacy policy, terms of service, and compliance information by Valoriya.',
+  keywords: ['faithlingo', 'privacy policy', 'terms of service', 'spiritual app', 'faith', 'christian app', 'valoriya'],
+  authors: [{ name: 'Valoriya Team' }],
+  creator: 'Valoriya',
+  publisher: 'Valoriya',
   metadataBase: new URL('https://legal-pages-site.vercel.app'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://legal-pages-site.vercel.app',
-    title: 'Legal Pages - Comprehensive Legal Documentation',
-    description: 'Comprehensive legal documentation including privacy policy, terms of service, and compliance information.',
-    siteName: 'Legal Pages',
+    title: 'Faithlingo Legal - Privacy Policy & Terms of Service',
+    description: 'Legal documentation for Faithlingo spiritual growth app by Valoriya.',
+    siteName: 'Faithlingo Legal',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Legal Pages - Comprehensive Legal Documentation',
+        alt: 'Faithlingo Legal - Privacy Policy & Terms of Service',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Legal Pages - Comprehensive Legal Documentation',
-    description: 'Comprehensive legal documentation including privacy policy, terms of service, and compliance information.',
+    title: 'Faithlingo Legal - Privacy Policy & Terms of Service',
+    description: 'Legal documentation for Faithlingo spiritual growth app by Valoriya.',
     images: ['/og-image.jpg'],
   },
   robots: {
