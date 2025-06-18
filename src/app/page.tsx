@@ -14,7 +14,10 @@ import {
   Copyright, 
   Phone,
   Search,
-  Download
+  Download,
+  BookOpen,
+  Heart,
+  Sparkles
 } from 'lucide-react'
 import { SearchBar } from '@/components/search-bar'
 
@@ -22,37 +25,37 @@ const legalDocuments = [
   {
     id: 'privacy-policy',
     title: 'Privacy Policy',
-    description: 'Comprehensive privacy protection and data handling practices compliant with GDPR, CCPA, and applicable regulations.',
+    description: 'Comprehensive privacy protection and data handling practices for your spiritual journey with AI features.',
     icon: Shield,
     href: '/privacy-policy',
-    color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-blue-50',
-    lastUpdated: 'December 1, 2024'
-  },
-  {
-    id: 'terms-of-service',
-    title: 'Terms of Service',
-    description: 'Detailed terms and conditions governing the use of our spiritual growth services and platform.',
-    icon: FileText,
-    href: '/terms-of-service',
-    color: 'from-indigo-500 to-indigo-600',
-    bgColor: 'bg-indigo-50',
-    lastUpdated: 'December 1, 2024'
-  },
-  {
-    id: 'cookie-policy',
-    title: 'Cookie Policy',
-    description: 'Transparent cookie usage policy with detailed consent management and opt-out procedures.',
-    icon: Cookie,
-    href: '/cookie-policy',
     color: 'from-purple-500 to-purple-600',
     bgColor: 'bg-purple-50',
     lastUpdated: 'December 1, 2024'
   },
   {
+    id: 'terms-of-service',
+    title: 'Terms of Service',
+    description: 'Detailed terms governing the use of Sanctus Bible & Prayer app and AI spiritual features.',
+    icon: FileText,
+    href: '/terms-of-service',
+    color: 'from-blue-500 to-blue-600',
+    bgColor: 'bg-blue-50',
+    lastUpdated: 'December 1, 2024'
+  },
+  {
+    id: 'cookie-policy',
+    title: 'Cookie Policy',
+    description: 'Transparent cookie usage policy with detailed consent management for enhanced spiritual experience.',
+    icon: Cookie,
+    href: '/cookie-policy',
+    color: 'from-indigo-500 to-indigo-600',
+    bgColor: 'bg-indigo-50',
+    lastUpdated: 'December 1, 2024'
+  },
+  {
     id: 'data-security',
     title: 'Data Security Policy',
-    description: 'Comprehensive security measures and data protection protocols with breach notification procedures.',
+    description: 'Comprehensive security measures protecting your prayers, Bible study data, and AI interactions.',
     icon: Lock,
     href: '/data-security',
     color: 'from-green-500 to-green-600',
@@ -62,7 +65,7 @@ const legalDocuments = [
   {
     id: 'accessibility',
     title: 'Accessibility Statement',
-    description: 'ADA compliance information, accommodation procedures, and accessibility contact details.',
+    description: 'Making spiritual growth accessible to all believers through inclusive design and features.',
     icon: Eye,
     href: '/accessibility',
     color: 'from-orange-500 to-orange-600',
@@ -72,7 +75,7 @@ const legalDocuments = [
   {
     id: 'refund-policy',
     title: 'Refund Policy',
-    description: 'Clear refund terms, processing timeframes, and exception guidelines for all services.',
+    description: 'Clear refund terms for premium spiritual features and subscription services.',
     icon: RefreshCcw,
     href: '/refund-policy',
     color: 'from-teal-500 to-teal-600',
@@ -82,7 +85,7 @@ const legalDocuments = [
   {
     id: 'disclaimer',
     title: 'Disclaimer',
-    description: 'Liability limitations, accuracy disclaimers, and third-party content responsibility statements.',
+    description: 'Important disclaimers regarding AI spiritual guidance and biblical content accuracy.',
     icon: AlertTriangle,
     href: '/disclaimer',
     color: 'from-yellow-500 to-yellow-600',
@@ -92,7 +95,7 @@ const legalDocuments = [
   {
     id: 'user-conduct',
     title: 'User Conduct Policy',
-    description: 'Acceptable use guidelines, prohibited activities, and enforcement procedures for platform users.',
+    description: 'Community guidelines for respectful interaction in our spiritual community platform.',
     icon: Users,
     href: '/user-conduct',
     color: 'from-pink-500 to-pink-600',
@@ -102,7 +105,7 @@ const legalDocuments = [
   {
     id: 'intellectual-property',
     title: 'Intellectual Property',
-    description: 'Copyright and trademark information, DMCA procedures, and user-generated content rights.',
+    description: 'Copyright information for biblical content, AI responses, and user-generated spiritual content.',
     icon: Copyright,
     href: '/intellectual-property',
     color: 'from-red-500 to-red-600',
@@ -112,7 +115,7 @@ const legalDocuments = [
   {
     id: 'contact',
     title: 'Contact Information',
-    description: 'Legal contact details, business address, compliance contact, and support information.',
+    description: 'Support contacts for spiritual guidance, technical help, and legal inquiries.',
     icon: Phone,
     href: '/contact',
     color: 'from-gray-500 to-gray-600',
@@ -160,15 +163,22 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              <BookOpen className="h-12 w-12 text-purple-600" />
+              <Heart className="h-10 w-10 text-blue-600" />
+              <Sparkles className="h-11 w-11 text-indigo-600" />
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              <span className="gradient-text">Legal Documentation</span>
+              <span className="gradient-text">Sanctus Legal Pages</span>
               <br />
-              <span className="text-gray-700">Made Beautiful</span>
+              <span className="text-gray-700">For Your Spiritual Journey</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive legal documentation for Faithlingo designed with stunning visuals and smooth animations. 
-              All documents meet applicable legal standards and regulatory compliance requirements.
+              Comprehensive legal documentation for Sanctus Bible & Prayer app, featuring AI Spiritual Mentor, 
+              Bible Chat, daily challenges, and calming music. All documents meet the highest legal standards 
+              while supporting your faith journey.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
@@ -178,7 +188,7 @@ export default function HomePage() {
               >
                 <Link href="#documents" className="btn-primary inline-flex items-center">
                   <FileText className="h-5 w-5 mr-2" />
-                  Browse Documents
+                  Browse Legal Documents
                 </Link>
               </motion.div>
               
@@ -188,7 +198,7 @@ export default function HomePage() {
               >
                 <Link href="/contact" className="btn-secondary inline-flex items-center">
                   <Phone className="h-5 w-5 mr-2" />
-                  Contact Support Team
+                  Contact Support
                 </Link>
               </motion.div>
             </div>
@@ -196,8 +206,8 @@ export default function HomePage() {
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-60 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-purple-200 rounded-full opacity-40 animate-float-delayed"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-60 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-40 animate-float-delayed"></div>
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-indigo-200 rounded-full opacity-50 animate-blob"></div>
       </motion.section>
 
@@ -210,7 +220,7 @@ export default function HomePage() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <Search className="h-12 w-12 mx-auto text-blue-600 mb-4" />
+            <Search className="h-12 w-12 mx-auto text-purple-600 mb-4" />
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Search Legal Documents</h2>
             <p className="text-gray-600">Find specific information across all our legal documentation</p>
           </div>
@@ -236,8 +246,8 @@ export default function HomePage() {
               Comprehensive <span className="gradient-text">Legal Coverage</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Navigate through our beautifully designed legal documents. Each document is carefully crafted 
-              to meet the highest legal standards while providing an exceptional user experience.
+              Navigate through our beautifully designed legal documents for Sanctus. Each document is carefully 
+              crafted to meet the highest legal standards while supporting your spiritual growth journey with AI features.
             </p>
           </motion.div>
 
@@ -257,7 +267,7 @@ export default function HomePage() {
                         <Icon className="h-8 w-8 text-white" />
                       </div>
                       
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
                         {doc.title}
                       </h3>
                       
@@ -311,29 +321,29 @@ export default function HomePage() {
               Why Choose Our <span className="gradient-text">Legal Documentation</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience legal documentation like never before with our innovative approach to compliance and design.
+              Experience legal documentation designed specifically for spiritual apps with AI features and community interaction.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Legally Compliant',
-                description: 'All documents meet applicable legal requirements and federal regulations.',
-                icon: Shield,
-                color: 'from-blue-500 to-blue-600'
-              },
-              {
-                title: 'Beautiful Design',
-                description: 'Stunning visual design with smooth animations and delightful interactions.',
-                icon: Eye,
+                title: 'Spiritually Focused',
+                description: 'Tailored specifically for Bible & Prayer apps with AI spiritual guidance features.',
+                icon: BookOpen,
                 color: 'from-purple-500 to-purple-600'
               },
               {
-                title: 'Always Updated',
-                description: 'Regular updates to ensure compliance with changing legal requirements.',
-                icon: RefreshCcw,
-                color: 'from-green-500 to-green-600'
+                title: 'AI-Ready Compliance',
+                description: 'Comprehensive coverage for AI Spiritual Mentor and Bible Chat features.',
+                icon: Sparkles,
+                color: 'from-blue-500 to-blue-600'
+              },
+              {
+                title: 'Community Focused',
+                description: 'Guidelines for spiritual community interaction and user-generated content.',
+                icon: Heart,
+                color: 'from-indigo-500 to-indigo-600'
               }
             ].map((feature, index) => {
               const Icon = feature.icon

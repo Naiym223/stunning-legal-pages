@@ -17,6 +17,9 @@ const searchableContent = [
       "ccpa",
       "collection",
       "processing",
+      "spiritual data",
+      "ai interactions",
+      "prayer data",
     ],
   },
   {
@@ -29,6 +32,9 @@ const searchableContent = [
       "service",
       "user obligations",
       "liability",
+      "ai features",
+      "spiritual guidance",
+      "bible chat",
     ],
   },
   {
@@ -41,6 +47,7 @@ const searchableContent = [
       "consent",
       "preferences",
       "opt-out",
+      "spiritual experience",
     ],
   },
   {
@@ -53,6 +60,8 @@ const searchableContent = [
       "breach",
       "safeguards",
       "protocols",
+      "spiritual data",
+      "ai security",
     ],
   },
   {
@@ -65,6 +74,8 @@ const searchableContent = [
       "disabilities",
       "accommodations",
       "wcag",
+      "spiritual growth",
+      "inclusive",
     ],
   },
   {
@@ -77,6 +88,8 @@ const searchableContent = [
       "payment",
       "billing",
       "reimbursement",
+      "premium features",
+      "subscription",
     ],
   },
   {
@@ -89,6 +102,8 @@ const searchableContent = [
       "warranty",
       "responsibility",
       "limitation",
+      "ai guidance",
+      "spiritual advice",
     ],
   },
   {
@@ -101,6 +116,8 @@ const searchableContent = [
       "acceptable use",
       "enforcement",
       "violations",
+      "community",
+      "spiritual community",
     ],
   },
   {
@@ -113,12 +130,23 @@ const searchableContent = [
       "intellectual property",
       "content",
       "infringement",
+      "biblical content",
+      "ai responses",
     ],
   },
   {
     title: "Contact Information",
     href: "/contact",
-    keywords: ["contact", "support", "legal", "address", "phone", "email"],
+    keywords: [
+      "contact", 
+      "support", 
+      "legal", 
+      "email", 
+      "help desk",
+      "ai support",
+      "spiritual guidance",
+      "technical support"
+    ],
   },
 ];
 
@@ -182,7 +210,7 @@ export function SearchBar() {
               onChange={(e) => setQuery(e.target.value)}
               onFocus={() => setFocused(true)}
               onBlur={() => setFocused(false)}
-              placeholder="Search legal documents..."
+              placeholder="Search Sanctus legal documents..."
               className="flex-1 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500 text-lg"
             />
             <AnimatePresence>
@@ -225,11 +253,11 @@ export function SearchBar() {
                     onClick={handleResultClick}
                     className="flex items-center p-3 rounded-xl hover:bg-white/50 transition-all duration-200 group"
                   >
-                    <div className="p-2 rounded-lg bg-blue-100 group-hover:bg-blue-200 transition-colors duration-200 mr-3">
-                      <FileText className="h-4 w-4 text-blue-600" />
+                    <div className="p-2 rounded-lg bg-purple-100 group-hover:bg-purple-200 transition-colors duration-200 mr-3">
+                      <FileText className="h-4 w-4 text-purple-600" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                      <h4 className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors duration-200">
                         {result.title}
                       </h4>
                       <p className="text-sm text-gray-500">
@@ -258,8 +286,7 @@ export function SearchBar() {
               <Search className="h-8 w-8 text-gray-400 mx-auto mb-2" />
               <p className="text-gray-600">No documents found for "{query}"</p>
               <p className="text-sm text-gray-500 mt-1">
-                Try searching for terms like "privacy", "terms", "cookies", or
-                "security"
+                Try searching for terms like "privacy", "terms", "ai features", "spiritual guidance", or "bible chat"
               </p>
             </div>
           </motion.div>

@@ -3,14 +3,15 @@
 import { Breadcrumb } from "@/components/breadcrumb";
 import { motion } from "framer-motion";
 import {
+  BookOpen,
   Clock,
-  FileText,
   Globe,
   Mail,
   MapPin,
   MessageSquare,
   Phone,
   Shield,
+  Sparkles,
   Users,
 } from "lucide-react";
 
@@ -18,26 +19,26 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email Support",
-    description: "Get help with Faithlingo and spiritual growth questions",
+    description: "Get help with Sanctus features, AI guidance, and spiritual questions",
     value: "support@walkwithchrist.shop",
     action: "mailto:support@walkwithchrist.shop",
-    color: "from-blue-500 to-blue-600",
+    color: "from-purple-500 to-purple-600",
   },
   {
     icon: MessageSquare,
     title: "Support Tickets",
-    description: "Create detailed support tickets for technical issues",
+    description: "Create detailed support tickets for AI features and technical issues",
     value: "Visit our help desk portal",
     action: "https://support.faithlybible.com",
-    color: "from-green-500 to-green-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
-    icon: Globe,
-    title: "Main Website",
-    description: "Visit our main company website for more information",
-    value: "valoriya.org",
-    action: "https://valoriya.org",
-    color: "from-purple-500 to-purple-600",
+    icon: Sparkles,
+    title: "AI Feature Support",
+    description: "Specialized support for AI Spiritual Mentor and Bible Chat",
+    value: "AI-focused assistance",
+    action: "mailto:support@walkwithchrist.shop?subject=AI%20Feature%20Support",
+    color: "from-indigo-500 to-indigo-600",
   },
 ];
 
@@ -46,19 +47,25 @@ const departments = [
     icon: Shield,
     title: "Privacy & Data Protection",
     email: "support@walkwithchrist.shop",
-    description: "Privacy policy and data protection questions",
+    description: "Privacy policy, spiritual data protection, and AI data questions",
   },
   {
-    icon: FileText,
-    title: "App Support",
+    icon: BookOpen,
+    title: "App & AI Support",
     email: "support@walkwithchrist.shop",
-    description: "Faithlingo app features and spiritual content",
+    description: "Sanctus app features, AI Spiritual Mentor, and Bible Chat assistance",
+  },
+  {
+    icon: Sparkles,
+    title: "Spiritual Guidance",
+    email: "support@walkwithchrist.shop",
+    description: "Questions about AI spiritual guidance and biblical content",
   },
   {
     icon: Users,
     title: "General Support",
     email: "support@walkwithchrist.shop",
-    description: "Account issues and general inquiries",
+    description: "Account issues, billing, and general inquiries",
   },
 ];
 
@@ -87,16 +94,16 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-8"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-gray-500 to-gray-600 mb-6">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 mb-6">
                 <Phone className="h-10 w-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Contact Information
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get in touch with our Faithlingo support team for help with your
-                spiritual growth journey. We're here to help you navigate your
-                faith and app features.
+                Get in touch with our Sanctus support team for help with your
+                spiritual growth journey, AI features, Bible study, and prayer tracking. 
+                We're here to support your faith journey.
               </p>
             </motion.div>
           </div>
@@ -126,13 +133,13 @@ export default function ContactPage() {
                     <Icon className="h-8 w-8 text-white" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
                     {method.title}
                   </h3>
 
                   <p className="text-gray-600 mb-4">{method.description}</p>
 
-                  <p className="text-lg font-semibold text-blue-600">
+                  <p className="text-lg font-semibold text-purple-600">
                     {method.value}
                   </p>
                 </motion.a>
@@ -151,27 +158,21 @@ export default function ContactPage() {
               {/* Business Details */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <MapPin className="h-6 w-6 mr-3 text-blue-600" />
+                  <MapPin className="h-6 w-6 mr-3 text-purple-600" />
                   Business Information
                 </h2>
 
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-2">
-                      Company Information
+                      App Information
                     </h3>
                     <p className="text-gray-600">
-                      Valoriya
+                      Sanctus - Bible & Prayer App
                       <br />
-                      Makers of Faithlingo
+                      Featuring AI Spiritual Mentor & Bible Chat
                       <br />
-                      Website:{" "}
-                      <a
-                        href="https://valoriya.org"
-                        className="text-blue-600 hover:text-blue-700"
-                      >
-                        https://valoriya.org
-                      </a>
+                      Daily Challenges & Prayer Tracking
                       <br />
                       United States
                     </p>
@@ -180,14 +181,15 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-2 flex items-center">
                       <Clock className="h-4 w-4 mr-2" />
-                      Business Hours
+                      Support Hours
                     </h3>
                     <div className="text-gray-600 space-y-1">
                       <p>Email Support: Available 24/7</p>
                       <p>Support Tickets: Monitored daily</p>
+                      <p>AI Feature Support: Priority response</p>
                       <p>Response Time: Within 24 hours</p>
                       <p className="text-sm text-gray-500 mt-2">
-                        For urgent matters, please use our support ticket system
+                        For urgent spiritual or technical matters, please use our support ticket system
                       </p>
                     </div>
                   </div>
@@ -197,11 +199,11 @@ export default function ContactPage() {
                       Support Channels
                     </h3>
                     <p className="text-gray-600">
-                      Email: General inquiries and quick questions
+                      Email: General inquiries and spiritual questions
                       <br />
-                      Help Desk: Detailed support tickets and technical issues
+                      Help Desk: Technical issues and AI feature support
                       <br />
-                      Website: Additional resources and information
+                      Specialized: AI Spiritual Mentor and Bible Chat assistance
                     </p>
                   </div>
                 </div>
@@ -224,8 +226,8 @@ export default function ContactPage() {
                         transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                         className="flex items-start space-x-4 p-4 rounded-xl hover:bg-white/50 transition-colors duration-200"
                       >
-                        <div className="p-2 rounded-lg bg-blue-100">
-                          <Icon className="h-5 w-5 text-blue-600" />
+                        <div className="p-2 rounded-lg bg-purple-100">
+                          <Icon className="h-5 w-5 text-purple-600" />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-gray-800">
@@ -236,7 +238,7 @@ export default function ContactPage() {
                           </p>
                           <a
                             href={`mailto:${dept.email}`}
-                            className="text-sm text-blue-600 hover:text-blue-700 transition-colors duration-200"
+                            className="text-sm text-purple-600 hover:text-purple-700 transition-colors duration-200"
                           >
                             {dept.email}
                           </a>
@@ -254,24 +256,24 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="bg-blue-50 border border-blue-200 rounded-3xl p-8"
+            className="bg-purple-50 border border-purple-200 rounded-3xl p-8"
           >
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-4">
-                <MessageSquare className="h-8 w-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 mb-4">
+                <MessageSquare className="h-8 w-8 text-purple-600" />
               </div>
-              <h2 className="text-2xl font-bold text-blue-900 mb-4">
+              <h2 className="text-2xl font-bold text-purple-900 mb-4">
                 How to Get Support
               </h2>
-              <p className="text-blue-800 mb-4">
+              <p className="text-purple-800 mb-4">
                 Choose the best way to contact us based on your needs:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <div className="text-left">
-                  <h3 className="font-semibold text-blue-900 mb-2">
+                  <h3 className="font-semibold text-purple-900 mb-2">
                     For General Questions:
                   </h3>
-                  <p className="text-sm text-blue-700">
+                  <p className="text-sm text-purple-700">
                     Email us at{" "}
                     <a
                       href="mailto:support@walkwithchrist.shop"
@@ -279,15 +281,15 @@ export default function ContactPage() {
                     >
                       support@walkwithchrist.shop
                     </a>{" "}
-                    for quick answers about Faithlingo features, account
-                    questions, or spiritual guidance.
+                    for quick answers about Sanctus features, AI guidance, 
+                    spiritual questions, or account issues.
                   </p>
                 </div>
                 <div className="text-left">
-                  <h3 className="font-semibold text-blue-900 mb-2">
-                    For Technical Issues:
+                  <h3 className="font-semibold text-purple-900 mb-2">
+                    For Technical & AI Issues:
                   </h3>
-                  <p className="text-sm text-blue-700">
+                  <p className="text-sm text-purple-700">
                     Create a support ticket at{" "}
                     <a
                       href="https://support.faithlybible.com"
@@ -295,57 +297,56 @@ export default function ContactPage() {
                     >
                       our help desk
                     </a>{" "}
-                    for detailed technical problems, bug reports, or feature
-                    requests.
+                    for detailed technical problems, AI feature issues, 
+                    bug reports, or feature requests.
                   </p>
                 </div>
               </div>
             </div>
           </motion.section>
 
-          {/* Additional Resources */}
+          {/* App Features */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="glass-card rounded-3xl p-8"
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Additional Resources
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <BookOpen className="h-6 w-6 mr-3 text-purple-600" />
+              Sanctus App Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">
-                  Faithlingo App
+                <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
+                  <Sparkles className="h-5 w-5 mr-2 text-purple-600" />
+                  AI-Powered Features
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Download our spiritual growth app:
+                  🤖 AI Spiritual Mentor for personalized guidance
                   <br />
-                  Available on iOS and Android
+                  💬 Bible Chat for biblical questions and answers
                   <br />
-                  Features daily lessons, prayer tracking, and community
+                  🎯 Personalized scripture recommendations
                   <br />
-                  Visit our main website for download links
+                  📚 AI-enhanced Bible study assistance
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">
-                  Company Information
+                <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
+                  <BookOpen className="h-5 w-5 mr-2 text-purple-600" />
+                  Core Features
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Valoriya - makers of Faithlingo
+                  📖 Complete Bible reading with progress tracking
                   <br />
-                  Website:{" "}
-                  <a
-                    href="https://valoriya.org"
-                    className="text-blue-600 hover:text-blue-700"
-                  >
-                    https://valoriya.org
-                  </a>
+                  🔥 Daily streak challenges for spiritual growth
                   <br />
-                  Supporting your spiritual growth journey
+                  🙏 Prayer tracking and reflection tools
                   <br />
-                  Connect with fellow believers
+                  🎵 Calming music with daily verse modals
+                  <br />
+                  📝 Personal spiritual notes and bookmarks
                 </p>
               </div>
             </div>

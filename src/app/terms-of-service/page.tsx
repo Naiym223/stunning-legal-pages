@@ -7,20 +7,24 @@ import { TableOfContents } from "@/components/table-of-contents";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
+  BookOpen,
   FileText,
   Gavel,
   Scale,
   Shield,
+  Sparkles,
   Users,
 } from "lucide-react";
 
 const sections = [
   { id: "acceptance", title: "Acceptance of Terms", level: 1 },
   { id: "description-of-service", title: "Description of Service", level: 1 },
+  { id: "ai-features", title: "AI Features & Spiritual Guidance", level: 2 },
   { id: "user-accounts", title: "User Accounts and Registration", level: 1 },
   { id: "user-obligations", title: "User Obligations and Conduct", level: 1 },
   { id: "acceptable-use", title: "Acceptable Use Policy", level: 2 },
   { id: "prohibited-activities", title: "Prohibited Activities", level: 2 },
+  { id: "spiritual-content", title: "Spiritual Content & AI Guidance", level: 1 },
   {
     id: "intellectual-property",
     title: "Intellectual Property Rights",
@@ -79,15 +83,15 @@ export default function TermsOfServicePage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="mt-8"
                 >
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-600 mb-6">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 mb-6">
                     <FileText className="h-10 w-10 text-white" />
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                     Terms of Service
                   </h1>
                   <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    These terms govern your use of Faithlingo and establish the
-                    legal relationship between you and Valoriya. Please read
+                    These terms govern your use of Sanctus Bible & Prayer app and establish the
+                    legal relationship between you and Sanctus. Please read
                     carefully.
                   </p>
                 </motion.div>
@@ -107,16 +111,15 @@ export default function TermsOfServicePage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Scale className="h-6 w-6 mr-3 text-indigo-600" />
+                    <Scale className="h-6 w-6 mr-3 text-blue-600" />
                     Acceptance of Terms
                   </motion.h2>
                   <p>
-                    By accessing, browsing, or using the Faithlingo app,
-                    Valoriya website, and spiritual growth services ("Service"),
-                    you acknowledge that you have read, understood, and agree to
+                    By accessing, browsing, or using the Sanctus Bible & Prayer app,
+                    website, and spiritual growth services ("Service"), you acknowledge that you have read, understood, and agree to
                     be bound by these Terms of Service ("Terms"). These Terms
                     constitute a legally binding agreement between you ("User"
-                    or "you") and Valoriya ("we," "us," or "our").
+                    or "you") and Sanctus ("we," "us," or "our").
                   </p>
                   <p>
                     If you do not agree to these Terms, you must not access or
@@ -134,32 +137,56 @@ export default function TermsOfServicePage() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-2xl font-bold text-gray-900 mb-4"
+                    className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
+                    <BookOpen className="h-6 w-6 mr-3 text-blue-600" />
                     Description of Service
                   </motion.h2>
                   <p>
-                    Faithlingo provides a spiritual growth platform designed to
-                    help users deepen their faith through daily lessons, prayer,
-                    and biblical content. Our Service includes:
+                    Sanctus provides a comprehensive Bible & Prayer platform designed to
+                    help users deepen their faith through technology-enhanced spiritual growth. Our Service includes:
                   </p>
                   <ul>
                     <li>
-                      Daily faith-based lessons and spiritual growth content
+                      Complete Bible reading with progress tracking and bookmarks
                     </li>
+                    <li>AI Spiritual Mentor for personalized spiritual guidance</li>
+                    <li>Bible Chat feature for AI-powered biblical questions and answers</li>
+                    <li>Daily streak challenges to build consistent spiritual habits</li>
                     <li>Prayer tracking and spiritual reflection tools</li>
-                    <li>Biblical study materials and devotionals</li>
+                    <li>Calming music integrated with daily verse modals</li>
                     <li>
                       Community features for connecting with fellow believers
                     </li>
                     <li>Customer support and spiritual guidance resources</li>
                   </ul>
+
+                  <h3
+                    id="ai-features"
+                    className="text-xl font-semibold text-gray-800 mb-3 flex items-center"
+                  >
+                    <Sparkles className="h-5 w-5 mr-2 text-blue-600" />
+                    AI Features & Spiritual Guidance
+                  </h3>
                   <p>
-                    <strong>Important:</strong> Our Service provides spiritual
-                    guidance and faith-based content but does not constitute
-                    professional religious counseling. We recommend consulting
-                    with qualified spiritual leaders or religious professionals
-                    for personal spiritual matters.
+                    Our AI-powered features are designed to enhance your spiritual journey:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>AI Spiritual Mentor:</strong> Provides personalized spiritual guidance based on biblical principles
+                    </li>
+                    <li>
+                      <strong>Bible Chat:</strong> Answers questions about biblical content, theology, and spiritual matters
+                    </li>
+                    <li>
+                      <strong>Personalized Recommendations:</strong> Suggests relevant scriptures, prayers, and spiritual content
+                    </li>
+                  </ul>
+                  <p>
+                    <strong>Important Disclaimer:</strong> Our AI features provide spiritual guidance based on biblical content but do not constitute
+                    professional religious counseling, pastoral care, or theological advice. We recommend consulting
+                    with qualified spiritual leaders, pastors, or religious professionals for personal spiritual matters,
+                    theological questions, or life decisions.
                   </p>
                 </section>
 
@@ -173,11 +200,11 @@ export default function TermsOfServicePage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Users className="h-6 w-6 mr-3 text-indigo-600" />
+                    <Users className="h-6 w-6 mr-3 text-blue-600" />
                     User Accounts and Registration
                   </motion.h2>
                   <p>
-                    To access certain features of our Service, you may need to
+                    To access certain features of Sanctus, you may need to
                     create an account:
                   </p>
                   <ul>
@@ -192,16 +219,15 @@ export default function TermsOfServicePage() {
                     </li>
                     <li>
                       <strong>Account Responsibility:</strong> You are
-                      responsible for all activities under your account
+                      responsible for all activities under your account, including AI interactions
                     </li>
                     <li>
-                      <strong>Age Requirement:</strong> You must be at least 18
-                      years old to create an account
+                      <strong>Age Requirement:</strong> You must be at least 13
+                      years old to create an account (parental guidance recommended for minors)
                     </li>
                     <li>
-                      <strong>Business Accounts:</strong> If registering on
-                      behalf of an organization, you warrant authority to bind
-                      that organization
+                      <strong>Spiritual Content:</strong> You acknowledge that spiritual and prayer data
+                      will be stored to enhance your experience
                     </li>
                   </ul>
                 </section>
@@ -225,14 +251,14 @@ export default function TermsOfServicePage() {
                   >
                     Acceptable Use Policy
                   </h3>
-                  <p>When using our Service, you agree to:</p>
+                  <p>When using Sanctus, you agree to:</p>
                   <ul>
                     <li>
                       Use the Service only for lawful purposes and in accordance
                       with these Terms
                     </li>
                     <li>
-                      Respect the intellectual property rights of Valoriya and
+                      Respect the intellectual property rights of Sanctus and
                       third parties
                     </li>
                     <li>
@@ -245,6 +271,9 @@ export default function TermsOfServicePage() {
                     <li>
                       Use the platform in a manner consistent with Christian
                       values and respect for others
+                    </li>
+                    <li>
+                      Use AI features responsibly and understand their limitations
                     </li>
                     <li>Comply with all applicable laws and regulations</li>
                   </ul>
@@ -262,11 +291,48 @@ export default function TermsOfServicePage() {
                     </li>
                     <li>Violate any laws in your jurisdiction or ours</li>
                     <li>Transmit viruses, malware, or other harmful code</li>
-                    <li>Attempt to gain unauthorized access to our systems</li>
+                    <li>Attempt to gain unauthorized access to our systems or AI models</li>
                     <li>Interfere with or disrupt the Service or servers</li>
                     <li>Collect or harvest user information without consent</li>
                     <li>Impersonate any person or entity</li>
-                    <li>Use automated systems to access the Service</li>
+                    <li>Use automated systems to access the Service or AI features</li>
+                    <li>Attempt to reverse engineer or extract AI model information</li>
+                    <li>Use AI responses for commercial purposes without permission</li>
+                  </ul>
+                </section>
+
+                <section
+                  id="spiritual-content"
+                  className="print-break-inside-avoid"
+                >
+                  <motion.h2
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
+                  >
+                    <BookOpen className="h-6 w-6 mr-3 text-blue-600" />
+                    Spiritual Content & AI Guidance
+                  </motion.h2>
+                  <p>
+                    Sanctus provides spiritual content and AI-powered guidance with the following understanding:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Biblical Accuracy:</strong> We strive for biblical accuracy but encourage personal study and verification
+                    </li>
+                    <li>
+                      <strong>AI Limitations:</strong> AI responses are generated based on training data and may not always reflect perfect theological understanding
+                    </li>
+                    <li>
+                      <strong>Personal Responsibility:</strong> Users are responsible for their spiritual decisions and should seek pastoral guidance for important matters
+                    </li>
+                    <li>
+                      <strong>Denominational Neutrality:</strong> We aim to provide broadly Christian content while respecting denominational differences
+                    </li>
+                    <li>
+                      <strong>Continuous Improvement:</strong> AI responses improve over time but should not replace scripture study and prayer
+                    </li>
                   </ul>
                 </section>
 
@@ -283,8 +349,8 @@ export default function TermsOfServicePage() {
                     Intellectual Property Rights
                   </motion.h2>
                   <p>
-                    The Service and its original content, features, and
-                    functionality are owned by Valoriya and are protected by
+                    The Service and its original content, features, AI models, and
+                    functionality are owned by Sanctus and are protected by
                     international copyright, trademark, patent, trade secret,
                     and other intellectual property laws.
                   </p>
@@ -294,11 +360,16 @@ export default function TermsOfServicePage() {
                     purpose. This license does not include the right to:
                   </p>
                   <ul>
-                    <li>Sell, resell, or commercialize the Service</li>
+                    <li>Sell, resell, or commercialize the Service or AI responses</li>
                     <li>Modify, distribute, or create derivative works</li>
-                    <li>Reverse engineer or attempt to extract source code</li>
+                    <li>Reverse engineer or attempt to extract source code or AI models</li>
                     <li>Remove or alter proprietary notices</li>
+                    <li>Use AI-generated content for commercial purposes</li>
                   </ul>
+                  <p>
+                    <strong>Biblical Content:</strong> Biblical text is in the public domain, but our
+                    specific presentations, AI interpretations, and enhanced features are proprietary.
+                  </p>
                 </section>
 
                 <section id="user-content" className="print-break-inside-avoid">
@@ -311,11 +382,11 @@ export default function TermsOfServicePage() {
                     User-Generated Content
                   </motion.h2>
                   <p>
-                    You retain ownership of content you submit to our Service.
+                    You retain ownership of spiritual content you submit to Sanctus (prayers, notes, reflections).
                     However, by submitting content, you grant us a worldwide,
                     non-exclusive, royalty-free license to use, reproduce,
                     modify, and distribute such content in connection with
-                    operating the Service.
+                    operating the Service and improving AI features.
                   </p>
                   <p>You represent and warrant that your content:</p>
                   <ul>
@@ -323,7 +394,12 @@ export default function TermsOfServicePage() {
                     <li>Complies with applicable laws and regulations</li>
                     <li>Does not contain harmful or malicious code</li>
                     <li>Is not defamatory, obscene, or offensive</li>
+                    <li>Respects the spiritual nature of the platform</li>
                   </ul>
+                  <p>
+                    <strong>Privacy of Spiritual Content:</strong> Personal prayers and spiritual reflections
+                    are treated with special care and are not shared publicly without your explicit consent.
+                  </p>
                 </section>
 
                 <section id="privacy-data" className="print-break-inside-avoid">
@@ -333,21 +409,21 @@ export default function TermsOfServicePage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Shield className="h-6 w-6 mr-3 text-indigo-600" />
+                    <Shield className="h-6 w-6 mr-3 text-blue-600" />
                     Privacy and Data Protection
                   </motion.h2>
                   <p>
-                    Your privacy is important to us. Our collection and use of
+                    Your privacy is important to us, especially regarding spiritual and personal data. Our collection and use of
                     personal information is governed by our Privacy Policy,
                     which is incorporated into these Terms by reference. Please
                     review our{" "}
                     <a
                       href="/privacy-policy"
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-purple-600 hover:text-purple-700"
                     >
                       Privacy Policy
                     </a>
-                    to understand our practices.
+                    to understand our practices regarding spiritual data, AI interactions, and personal information.
                   </p>
                 </section>
 
@@ -363,7 +439,7 @@ export default function TermsOfServicePage() {
                   >
                     Payment Terms and Billing
                   </motion.h2>
-                  <p>For paid services:</p>
+                  <p>For premium features and services:</p>
                   <ul>
                     <li>
                       <strong>Payment:</strong> Payment is due upon purchase or
@@ -371,7 +447,7 @@ export default function TermsOfServicePage() {
                     </li>
                     <li>
                       <strong>Billing:</strong> Recurring charges will be billed
-                      in advance
+                      in advance for premium AI features
                     </li>
                     <li>
                       <strong>Taxes:</strong> You are responsible for applicable
@@ -381,7 +457,7 @@ export default function TermsOfServicePage() {
                       <strong>Refunds:</strong> Subject to our{" "}
                       <a
                         href="/refund-policy"
-                        className="text-blue-600 hover:text-blue-700"
+                        className="text-purple-600 hover:text-purple-700"
                       >
                         Refund Policy
                       </a>
@@ -389,6 +465,9 @@ export default function TermsOfServicePage() {
                     <li>
                       <strong>Price Changes:</strong> We may change prices with
                       30 days' notice
+                    </li>
+                    <li>
+                      <strong>Free Features:</strong> Basic Bible reading and prayer features remain free
                     </li>
                   </ul>
                 </section>
@@ -407,9 +486,9 @@ export default function TermsOfServicePage() {
                   </motion.h2>
                   <p>
                     We strive to maintain Service availability but cannot
-                    guarantee uninterrupted access. We reserve the right to
+                    guarantee uninterrupted access to Sanctus or AI features. We reserve the right to
                     modify, suspend, or discontinue the Service at any time with
-                    reasonable notice.
+                    reasonable notice. AI features may be updated or improved without notice.
                   </p>
                 </section>
 
@@ -426,7 +505,7 @@ export default function TermsOfServicePage() {
                     We may terminate or suspend your account immediately for
                     violations of these Terms. You may terminate your account at
                     any time by contacting us. Upon termination, your right to
-                    use the Service ceases immediately.
+                    use the Service ceases immediately, but your spiritual data can be exported upon request.
                   </p>
                 </section>
 
@@ -437,7 +516,7 @@ export default function TermsOfServicePage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <AlertTriangle className="h-6 w-6 mr-3 text-indigo-600" />
+                    <AlertTriangle className="h-6 w-6 mr-3 text-blue-600" />
                     Disclaimers and Warranties
                   </motion.h2>
                   <p>
@@ -445,6 +524,11 @@ export default function TermsOfServicePage() {
                     KIND. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED,
                     INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
                     AND NON-INFRINGEMENT.
+                  </p>
+                  <p>
+                    <strong>SPIRITUAL GUIDANCE DISCLAIMER:</strong> AI SPIRITUAL GUIDANCE IS PROVIDED
+                    FOR INFORMATIONAL PURPOSES ONLY AND DOES NOT CONSTITUTE PROFESSIONAL
+                    RELIGIOUS COUNSELING, PASTORAL CARE, OR THEOLOGICAL ADVICE.
                   </p>
                 </section>
 
@@ -463,7 +547,8 @@ export default function TermsOfServicePage() {
                   <p>
                     TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE
                     LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
-                    OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICE.
+                    OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICE,
+                    INCLUDING AI FEATURES AND SPIRITUAL GUIDANCE.
                   </p>
                 </section>
 
@@ -480,9 +565,10 @@ export default function TermsOfServicePage() {
                     Indemnification
                   </motion.h2>
                   <p>
-                    You agree to indemnify and hold harmless Valoriya from any
+                    You agree to indemnify and hold harmless Sanctus from any
                     claims arising from your use of the Service, violation of
-                    these Terms, or infringement of any third-party rights.
+                    these Terms, or infringement of any third-party rights, including
+                    claims related to AI-generated content or spiritual guidance.
                   </p>
                 </section>
 
@@ -496,7 +582,7 @@ export default function TermsOfServicePage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Gavel className="h-6 w-6 mr-3 text-indigo-600" />
+                    <Gavel className="h-6 w-6 mr-3 text-blue-600" />
                     Governing Law and Jurisdiction
                   </motion.h2>
                   <p>
@@ -521,7 +607,7 @@ export default function TermsOfServicePage() {
                   </motion.h2>
                   <p>
                     We encourage resolving disputes through direct
-                    communication. If necessary, disputes may be subject to
+                    communication in a spirit of Christian reconciliation. If necessary, disputes may be subject to
                     binding arbitration under the rules of the American
                     Arbitration Association.
                   </p>
@@ -540,9 +626,10 @@ export default function TermsOfServicePage() {
                     Changes to Terms
                   </motion.h2>
                   <p>
-                    We reserve the right to modify these Terms at any time. We
+                    We reserve the right to modify these Terms at any time,
+                    especially as we improve AI features and add new spiritual tools. We
                     will notify users of significant changes via email or
-                    website notice. Continued use after changes constitutes
+                    in-app notice. Continued use after changes constitutes
                     acceptance of the modified Terms.
                   </p>
                 </section>
@@ -560,7 +647,7 @@ export default function TermsOfServicePage() {
                     Contact Information
                   </motion.h2>
                   <p>For questions about these Terms, please contact us:</p>
-                  <div className="bg-indigo-50 rounded-xl p-6 mt-4">
+                  <div className="bg-blue-50 rounded-xl p-6 mt-4">
                     <ul className="space-y-2">
                       <li>
                         <strong>Email:</strong> support@walkwithchrist.shop
@@ -569,27 +656,21 @@ export default function TermsOfServicePage() {
                         <strong>Support Tickets:</strong>{" "}
                         <a
                           href="https://support.faithlybible.com"
-                          className="text-blue-600 hover:text-blue-700"
+                          className="text-purple-600 hover:text-purple-700"
                         >
                           https://support.faithlybible.com
                         </a>
                       </li>
                       <li>
-                        <strong>Company:</strong> Valoriya
+                        <strong>App:</strong> Sanctus Bible & Prayer
                       </li>
                       <li>
-                        <strong>Website:</strong>{" "}
-                        <a
-                          href="https://valoriya.org"
-                          className="text-blue-600 hover:text-blue-700"
-                        >
-                          https://valoriya.org
-                        </a>
+                        <strong>Features:</strong> AI Spiritual Mentor, Bible Chat, Daily Challenges, Prayer Tracking
                       </li>
                     </ul>
                     <p className="text-sm text-gray-600 mt-4">
-                      For general inquiries, email us directly. For technical
-                      support tickets, please use our help desk portal.
+                      For general inquiries about spiritual features, email us directly. 
+                      For technical support with AI features, please use our help desk portal.
                     </p>
                   </div>
                 </section>

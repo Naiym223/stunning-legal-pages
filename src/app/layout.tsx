@@ -14,46 +14,48 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Faithlingo Legal",
-    default: "Faithlingo Legal - Privacy Policy & Terms of Service",
+    template: "%s | Sanctus Legal",
+    default: "Sanctus Legal - Privacy Policy & Terms of Service",
   },
   description:
-    "Legal documentation for Faithlingo spiritual growth app including privacy policy, terms of service, and compliance information by Valoriya.",
+    "Legal documentation for Sanctus Bible & Prayer app including privacy policy, terms of service, and compliance information. Features AI Spiritual Mentor, Bible Chat, daily challenges, and calming music.",
   keywords: [
-    "faithlingo",
+    "sanctus",
     "privacy policy",
     "terms of service",
-    "spiritual app",
-    "faith",
+    "bible app",
+    "prayer app",
+    "spiritual mentor",
+    "bible chat",
+    "ai",
     "christian app",
-    "valoriya",
   ],
-  authors: [{ name: "Valoriya Team" }],
-  creator: "Valoriya",
-  publisher: "Valoriya",
+  authors: [{ name: "Sanctus Team" }],
+  creator: "Sanctus",
+  publisher: "Sanctus",
   metadataBase: new URL("https://legal-pages-site.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://legal-pages-site.vercel.app",
-    title: "Faithlingo Legal - Privacy Policy & Terms of Service",
+    title: "Sanctus Legal - Privacy Policy & Terms of Service",
     description:
-      "Legal documentation for Faithlingo spiritual growth app by Valoriya.",
-    siteName: "Faithlingo Legal",
+      "Legal documentation for Sanctus Bible & Prayer app with AI features.",
+    siteName: "Sanctus Legal",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Faithlingo Legal - Privacy Policy & Terms of Service",
+        alt: "Sanctus Legal - Privacy Policy & Terms of Service",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Faithlingo Legal - Privacy Policy & Terms of Service",
+    title: "Sanctus Legal - Privacy Policy & Terms of Service",
     description:
-      "Legal documentation for Faithlingo spiritual growth app by Valoriya.",
+      "Legal documentation for Sanctus Bible & Prayer app with AI features.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -83,7 +85,7 @@ export default function RootLayout({
       className={`${inter.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 font-sans antialiased">
+      <body className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -93,9 +95,9 @@ export default function RootLayout({
           {/* Background Elements */}
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-            <div className="absolute top-40 left-40 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-            <div className="absolute bottom-40 right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div className="absolute top-40 left-40 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+            <div className="absolute bottom-40 right-40 w-80 h-80 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
           </div>
 
           <div className="relative z-10">

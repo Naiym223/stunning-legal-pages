@@ -5,15 +5,18 @@ import { LastUpdated } from "@/components/last-updated";
 import { PrintButton } from "@/components/print-button";
 import { TableOfContents } from "@/components/table-of-contents";
 import { motion } from "framer-motion";
-import { Eye, Globe, Lock, Mail, Shield, Users } from "lucide-react";
+import { BookOpen, Eye, Globe, Lock, Mail, Shield, Sparkles, Users } from "lucide-react";
 
 const sections = [
   { id: "overview", title: "Overview", level: 1 },
   { id: "information-we-collect", title: "Information We Collect", level: 1 },
   { id: "personal-information", title: "Personal Information", level: 2 },
+  { id: "spiritual-data", title: "Spiritual & Prayer Data", level: 2 },
+  { id: "ai-interactions", title: "AI Interaction Data", level: 2 },
   { id: "usage-information", title: "Usage Information", level: 2 },
   { id: "cookies-tracking", title: "Cookies and Tracking", level: 2 },
   { id: "how-we-use", title: "How We Use Your Information", level: 1 },
+  { id: "ai-processing", title: "AI Processing & Spiritual Guidance", level: 2 },
   {
     id: "information-sharing",
     title: "Information Sharing and Disclosure",
@@ -69,7 +72,7 @@ export default function PrivacyPolicyPage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="mt-8"
                 >
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 mb-6">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 mb-6">
                     <Shield className="h-10 w-10 text-white" />
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -77,8 +80,8 @@ export default function PrivacyPolicyPage() {
                   </h1>
                   <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                     We are committed to protecting your privacy and ensuring the
-                    security of your personal information. This policy explains
-                    how we collect, use, and safeguard your data.
+                    security of your personal and spiritual information. This policy explains
+                    how we collect, use, and safeguard your data in Sanctus.
                   </p>
                 </motion.div>
 
@@ -97,22 +100,24 @@ export default function PrivacyPolicyPage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Eye className="h-6 w-6 mr-3 text-blue-600" />
+                    <Eye className="h-6 w-6 mr-3 text-purple-600" />
                     Overview
                   </motion.h2>
                   <p>
-                    This Privacy Policy describes how Valoriya ("we," "our," or
-                    "us"), the company behind Faithlingo, collects, uses, and
-                    protects your personal information when you visit our
-                    website or use our spiritual growth services. We are
-                    committed to transparency and compliance with applicable
+                    This Privacy Policy describes how Sanctus ("we," "our," or
+                    "us") collects, uses, and protects your personal information when you use our
+                    Bible & Prayer app and spiritual growth services. Sanctus features AI Spiritual Mentor,
+                    Bible Chat, daily streak challenges, calming music, and prayer tracking to enhance
+                    your spiritual journey.
+                  </p>
+                  <p>
+                    We are committed to transparency and compliance with applicable
                     privacy laws, including the General Data Protection
                     Regulation (GDPR), California Consumer Privacy Act (CCPA),
                     and other applicable federal and state regulations.
                   </p>
                   <p>
-                    By using our website, Faithlingo app, or spiritual growth
-                    services, you consent to the collection and use of your
+                    By using Sanctus, you consent to the collection and use of your
                     information as described in this policy. If you do not agree
                     with our practices, please do not use our services.
                   </p>
@@ -128,7 +133,7 @@ export default function PrivacyPolicyPage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Users className="h-6 w-6 mr-3 text-blue-600" />
+                    <Users className="h-6 w-6 mr-3 text-purple-600" />
                     Information We Collect
                   </motion.h2>
 
@@ -144,24 +149,73 @@ export default function PrivacyPolicyPage() {
                   <ul>
                     <li>
                       <strong>Contact Information:</strong> Name, email address,
-                      phone number, mailing address
+                      phone number (optional)
                     </li>
                     <li>
                       <strong>Account Information:</strong> Username, password
-                      (encrypted), profile preferences
+                      (encrypted), profile preferences, spiritual goals
                     </li>
                     <li>
                       <strong>Payment Information:</strong> Credit card details,
                       billing address (processed securely through third-party
-                      providers)
+                      providers for premium features)
                     </li>
                     <li>
                       <strong>Communication Data:</strong> Messages you send to
-                      us, support inquiries, feedback
+                      us, support inquiries, feedback, community interactions
+                    </li>
+                  </ul>
+
+                  <h3
+                    id="spiritual-data"
+                    className="text-xl font-semibold text-gray-800 mb-3 flex items-center"
+                  >
+                    <BookOpen className="h-5 w-5 mr-2 text-purple-600" />
+                    Spiritual & Prayer Data
+                  </h3>
+                  <p>
+                    To provide personalized spiritual guidance, we collect:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Prayer Requests:</strong> Personal prayers and spiritual intentions
                     </li>
                     <li>
-                      <strong>Professional Information:</strong> Job title,
-                      company name, industry (when relevant)
+                      <strong>Bible Reading Progress:</strong> Chapters read, bookmarks, notes
+                    </li>
+                    <li>
+                      <strong>Daily Challenges:</strong> Streak data, completed challenges, spiritual milestones
+                    </li>
+                    <li>
+                      <strong>Spiritual Preferences:</strong> Favorite verses, prayer topics, devotional preferences
+                    </li>
+                    <li>
+                      <strong>Reflection Notes:</strong> Personal spiritual insights and journal entries
+                    </li>
+                  </ul>
+
+                  <h3
+                    id="ai-interactions"
+                    className="text-xl font-semibold text-gray-800 mb-3 flex items-center"
+                  >
+                    <Sparkles className="h-5 w-5 mr-2 text-purple-600" />
+                    AI Interaction Data
+                  </h3>
+                  <p>
+                    For our AI Spiritual Mentor and Bible Chat features:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Conversation History:</strong> Questions asked to AI Spiritual Mentor
+                    </li>
+                    <li>
+                      <strong>Bible Chat Queries:</strong> Biblical questions and AI responses
+                    </li>
+                    <li>
+                      <strong>Spiritual Guidance Requests:</strong> Topics discussed with AI mentor
+                    </li>
+                    <li>
+                      <strong>Learning Patterns:</strong> How you interact with AI features for personalization
                     </li>
                   </ul>
 
@@ -173,7 +227,7 @@ export default function PrivacyPolicyPage() {
                   </h3>
                   <p>
                     We automatically collect information about how you interact
-                    with our services:
+                    with Sanctus:
                   </p>
                   <ul>
                     <li>
@@ -181,15 +235,15 @@ export default function PrivacyPolicyPage() {
                       type, operating system, device identifiers
                     </li>
                     <li>
-                      <strong>Usage Analytics:</strong> Pages visited, time
-                      spent, click patterns, referral sources
+                      <strong>App Analytics:</strong> Features used, time spent,
+                      navigation patterns, music listening habits
                     </li>
                     <li>
                       <strong>Location Data:</strong> General geographic
-                      location based on IP address
+                      location (for relevant spiritual content)
                     </li>
                     <li>
-                      <strong>Performance Data:</strong> Website loading times,
+                      <strong>Performance Data:</strong> App loading times,
                       error reports, crash logs
                     </li>
                   </ul>
@@ -202,11 +256,11 @@ export default function PrivacyPolicyPage() {
                   </h3>
                   <p>
                     We use cookies, web beacons, and similar technologies to
-                    enhance your experience. For detailed information about our
+                    enhance your spiritual experience. For detailed information about our
                     cookie practices, please see our
                     <a
                       href="/cookie-policy"
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-purple-600 hover:text-purple-700"
                     >
                       {" "}
                       Cookie Policy
@@ -222,7 +276,7 @@ export default function PrivacyPolicyPage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Globe className="h-6 w-6 mr-3 text-blue-600" />
+                    <Globe className="h-6 w-6 mr-3 text-purple-600" />
                     How We Use Your Information
                   </motion.h2>
                   <p>
@@ -230,16 +284,20 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <ul>
                     <li>
-                      <strong>Service Provision:</strong> To provide, maintain,
-                      and improve Faithlingo and our spiritual growth services
+                      <strong>Spiritual Service Provision:</strong> To provide, maintain,
+                      and improve Sanctus and our Bible & Prayer features
+                    </li>
+                    <li>
+                      <strong>Personalized Guidance:</strong> To customize your spiritual
+                      experience and provide relevant biblical content
+                    </li>
+                    <li>
+                      <strong>AI Enhancement:</strong> To improve our AI Spiritual Mentor
+                      and Bible Chat responses
                     </li>
                     <li>
                       <strong>Communication:</strong> To respond to inquiries,
-                      send updates, and provide customer support
-                    </li>
-                    <li>
-                      <strong>Personalization:</strong> To customize your faith
-                      learning experience and provide relevant spiritual content
+                      send spiritual updates, and provide support
                     </li>
                     <li>
                       <strong>Security:</strong> To protect against fraud,
@@ -251,14 +309,31 @@ export default function PrivacyPolicyPage() {
                     </li>
                     <li>
                       <strong>Analytics:</strong> To understand usage patterns
-                      and improve our spiritual growth platform
-                    </li>
-                    <li>
-                      <strong>Marketing:</strong> To send promotional materials
-                      about faith-based content (with your consent where
-                      required)
+                      and improve our spiritual platform
                     </li>
                   </ul>
+
+                  <h3
+                    id="ai-processing"
+                    className="text-xl font-semibold text-gray-800 mb-3 flex items-center"
+                  >
+                    <Sparkles className="h-5 w-5 mr-2 text-purple-600" />
+                    AI Processing & Spiritual Guidance
+                  </h3>
+                  <p>
+                    Our AI features process your spiritual data to:
+                  </p>
+                  <ul>
+                    <li>Provide personalized biblical guidance and answers</li>
+                    <li>Suggest relevant scripture based on your spiritual journey</li>
+                    <li>Offer prayer recommendations and spiritual insights</li>
+                    <li>Track your spiritual growth and suggest improvements</li>
+                    <li>Enhance the accuracy of our AI Spiritual Mentor responses</li>
+                  </ul>
+                  <p>
+                    <strong>Important:</strong> AI responses are for spiritual guidance only
+                    and should not replace professional counseling or pastoral care.
+                  </p>
                 </section>
 
                 <section
@@ -274,13 +349,13 @@ export default function PrivacyPolicyPage() {
                     Information Sharing and Disclosure
                   </motion.h2>
                   <p>
-                    We do not sell your personal information. We may share your
+                    We do not sell your personal or spiritual information. We may share your
                     information in the following circumstances:
                   </p>
                   <ul>
                     <li>
                       <strong>Service Providers:</strong> Trusted third parties
-                      who assist in operating our services
+                      who assist in operating our spiritual services (AI providers, cloud storage)
                     </li>
                     <li>
                       <strong>Legal Requirements:</strong> When required by law,
@@ -299,6 +374,11 @@ export default function PrivacyPolicyPage() {
                       safety, or the rights of others
                     </li>
                   </ul>
+                  <p>
+                    <strong>Spiritual Data Protection:</strong> We take extra care with
+                    spiritual and prayer data, ensuring it's only shared when absolutely
+                    necessary and with appropriate safeguards.
+                  </p>
                 </section>
 
                 <section
@@ -311,29 +391,29 @@ export default function PrivacyPolicyPage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Lock className="h-6 w-6 mr-3 text-blue-600" />
+                    <Lock className="h-6 w-6 mr-3 text-purple-600" />
                     Data Security
                   </motion.h2>
                   <p>
                     We implement comprehensive security measures to protect your
-                    personal information, including:
+                    personal and spiritual information, including:
                   </p>
                   <ul>
                     <li>
-                      <strong>Encryption:</strong> Data in transit and at rest
-                      is encrypted using industry standards
+                      <strong>Encryption:</strong> All spiritual data, prayers, and AI
+                      conversations are encrypted in transit and at rest
                     </li>
                     <li>
                       <strong>Access Controls:</strong> Strict access controls
-                      and authentication requirements
+                      and authentication requirements for spiritual data
                     </li>
                     <li>
                       <strong>Regular Audits:</strong> Security assessments and
-                      vulnerability testing
+                      vulnerability testing of AI systems
                     </li>
                     <li>
                       <strong>Staff Training:</strong> Regular security training
-                      for all personnel
+                      for all personnel handling spiritual data
                     </li>
                     <li>
                       <strong>Incident Response:</strong> Procedures for
@@ -345,7 +425,7 @@ export default function PrivacyPolicyPage() {
                     please see our
                     <a
                       href="/data-security"
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-purple-600 hover:text-purple-700"
                     >
                       {" "}
                       Data Security Policy
@@ -376,8 +456,7 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <ul>
                     <li>
-                      <strong>Access:</strong> Right to access your personal
-                      data
+                      <strong>Access:</strong> Right to access your personal and spiritual data
                     </li>
                     <li>
                       <strong>Rectification:</strong> Right to correct
@@ -385,10 +464,11 @@ export default function PrivacyPolicyPage() {
                     </li>
                     <li>
                       <strong>Erasure:</strong> Right to deletion ("right to be
-                      forgotten")
+                      forgotten") including spiritual data
                     </li>
                     <li>
                       <strong>Portability:</strong> Right to data portability
+                      for your spiritual journey data
                     </li>
                     <li>
                       <strong>Restriction:</strong> Right to restrict processing
@@ -398,7 +478,7 @@ export default function PrivacyPolicyPage() {
                     </li>
                     <li>
                       <strong>Automated Decision-Making:</strong> Rights
-                      regarding automated processing
+                      regarding AI processing and automated spiritual guidance
                     </li>
                   </ul>
 
@@ -414,16 +494,16 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <ul>
                     <li>
-                      <strong>Know:</strong> Right to know what personal
+                      <strong>Know:</strong> Right to know what personal and spiritual
                       information is collected
                     </li>
                     <li>
-                      <strong>Delete:</strong> Right to delete personal
+                      <strong>Delete:</strong> Right to delete personal and spiritual
                       information
                     </li>
                     <li>
                       <strong>Opt-Out:</strong> Right to opt out of the sale of
-                      personal information
+                      personal information (we don't sell spiritual data)
                     </li>
                     <li>
                       <strong>Non-Discrimination:</strong> Right to
@@ -446,11 +526,26 @@ export default function PrivacyPolicyPage() {
                   </motion.h2>
                   <p>
                     We retain your personal information only as long as
-                    necessary to fulfill the purposes outlined in this policy,
-                    comply with legal obligations, resolve disputes, and enforce
-                    our agreements. Specific retention periods vary based on the
-                    type of information and applicable legal requirements.
+                    necessary to fulfill the purposes outlined in this policy.
+                    Specific retention periods:
                   </p>
+                  <ul>
+                    <li>
+                      <strong>Account Data:</strong> Retained while your account is active
+                    </li>
+                    <li>
+                      <strong>Spiritual Data:</strong> Retained to maintain your spiritual
+                      journey continuity (can be deleted upon request)
+                    </li>
+                    <li>
+                      <strong>AI Conversations:</strong> Retained to improve AI responses
+                      (anonymized after 2 years)
+                    </li>
+                    <li>
+                      <strong>Prayer Data:</strong> Retained as long as you use the app
+                      (fully deletable)
+                    </li>
+                  </ul>
                 </section>
 
                 <section
@@ -469,8 +564,8 @@ export default function PrivacyPolicyPage() {
                     Your information may be transferred to and processed in
                     countries other than your own. We implement appropriate
                     safeguards, including Standard Contractual Clauses and
-                    adequacy decisions, to ensure your data receives adequate
-                    protection.
+                    adequacy decisions, to ensure your spiritual data receives adequate
+                    protection across borders.
                   </p>
                 </section>
 
@@ -487,10 +582,10 @@ export default function PrivacyPolicyPage() {
                     Children's Privacy
                   </motion.h2>
                   <p>
-                    Faithlingo and our spiritual growth services are not
-                    intended for children under 13 years of age. We do not
-                    knowingly collect personal information from children under
-                    13. If we become aware that we have collected such
+                    Sanctus is intended for users 13 years and older. For users
+                    under 18, we recommend parental guidance when using AI spiritual
+                    features. We do not knowingly collect personal information from
+                    children under 13. If we become aware that we have collected such
                     information, we will take steps to delete it promptly.
                   </p>
                 </section>
@@ -509,10 +604,9 @@ export default function PrivacyPolicyPage() {
                   </motion.h2>
                   <p>
                     We may update this Privacy Policy periodically to reflect
-                    changes in our practices or applicable laws. We will notify
-                    you of significant changes by posting a notice on our
-                    website or sending you an email. Your continued use of
-                    Faithlingo and our services after such changes constitutes
+                    changes in our practices, new AI features, or applicable laws. We will notify
+                    you of significant changes by posting a notice in the app or sending you an email. 
+                    Your continued use of Sanctus after such changes constitutes
                     acceptance of the updated policy.
                   </p>
                 </section>
@@ -524,14 +618,14 @@ export default function PrivacyPolicyPage() {
                     transition={{ duration: 0.6 }}
                     className="text-2xl font-bold text-gray-900 mb-4 flex items-center"
                   >
-                    <Mail className="h-6 w-6 mr-3 text-blue-600" />
+                    <Mail className="h-6 w-6 mr-3 text-purple-600" />
                     Contact Us
                   </motion.h2>
                   <p>
                     If you have questions about this Privacy Policy or wish to
                     exercise your privacy rights, please contact us:
                   </p>
-                  <div className="bg-blue-50 rounded-xl p-6 mt-4">
+                  <div className="bg-purple-50 rounded-xl p-6 mt-4">
                     <ul className="space-y-2">
                       <li>
                         <strong>Email:</strong> support@walkwithchrist.shop
@@ -540,27 +634,21 @@ export default function PrivacyPolicyPage() {
                         <strong>Support Tickets:</strong>{" "}
                         <a
                           href="https://support.faithlybible.com"
-                          className="text-blue-600 hover:text-blue-700"
+                          className="text-purple-600 hover:text-purple-700"
                         >
                           https://support.faithlybible.com
                         </a>
                       </li>
                       <li>
-                        <strong>Company:</strong> Valoriya
+                        <strong>App:</strong> Sanctus Bible & Prayer
                       </li>
                       <li>
-                        <strong>Website:</strong>{" "}
-                        <a
-                          href="https://valoriya.org"
-                          className="text-blue-600 hover:text-blue-700"
-                        >
-                          https://valoriya.org
-                        </a>
+                        <strong>Features:</strong> AI Spiritual Mentor, Bible Chat, Daily Challenges
                       </li>
                     </ul>
                     <p className="text-sm text-gray-600 mt-4">
-                      For general inquiries, email us directly. For technical
-                      support tickets, please use our help desk portal.
+                      For general inquiries about spiritual features, email us directly. 
+                      For technical support with AI features, please use our help desk portal.
                     </p>
                   </div>
                 </section>

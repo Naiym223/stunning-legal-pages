@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { FileText, Home, Menu, Moon, Sun, X } from "lucide-react";
+import { BookOpen, Home, Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -47,10 +47,10 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover-lift">
-            <div className="p-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg">
-              <FileText className="h-6 w-6 text-white" />
+            <div className="p-2 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 shadow-lg">
+              <BookOpen className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold gradient-text">Faithlingo</span>
+            <span className="text-xl font-bold gradient-text">Sanctus</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -91,7 +91,7 @@ export function Navigation() {
                     href={page.href}
                     className={`block px-4 py-2 text-sm hover:bg-white/50 transition-colors duration-200 ${
                       pathname === page.href
-                        ? "bg-white/70 text-blue-600"
+                        ? "bg-white/70 text-purple-600"
                         : "text-gray-700"
                     }`}
                   >
@@ -139,7 +139,7 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
                   pathname === "/"
-                    ? "bg-white/70 text-blue-600"
+                    ? "bg-white/70 text-purple-600"
                     : "hover:bg-white/50"
                 }`}
               >
@@ -156,7 +156,7 @@ export function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
                     pathname === page.href
-                      ? "bg-white/70 text-blue-600"
+                      ? "bg-white/70 text-purple-600"
                       : "hover:bg-white/50"
                   }`}
                 >

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, FileText, Mail, MapPin, Phone } from "lucide-react";
+import { BookOpen, ExternalLink, Mail, MapPin, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 const legalLinks = [
@@ -35,16 +35,17 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <div className="p-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg">
-                <FileText className="h-6 w-6 text-white" />
+              <div className="p-2 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 shadow-lg">
+                <BookOpen className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold gradient-text">
-                Faithlingo
+                Sanctus
               </span>
             </div>
             <p className="text-gray-600 text-sm">
-              A spiritual growth platform helping believers deepen their faith
-              through daily lessons, prayer, and biblical content.
+              A comprehensive Bible & Prayer app featuring AI Spiritual Mentor, 
+              Bible Chat, daily streak challenges, and calming music to enhance 
+              your spiritual journey.
             </p>
             <div className="space-y-2 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
@@ -56,15 +57,8 @@ export function Footer() {
                 <span>support@walkwithchrist.shop</span>
               </div>
               <div className="flex items-center space-x-2">
-                <ExternalLink className="h-4 w-4" />
-                <span>
-                  <a
-                    href="https://valoriya.org"
-                    className="text-gray-600 hover:text-blue-600"
-                  >
-                    valoriya.org
-                  </a>
-                </span>
+                <Sparkles className="h-4 w-4" />
+                <span>AI-Powered Spiritual Growth</span>
               </div>
             </div>
           </motion.div>
@@ -84,7 +78,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm flex items-center group"
+                    className="text-gray-600 hover:text-purple-600 transition-colors duration-200 text-sm flex items-center group"
                   >
                     {link.label}
                     <ExternalLink className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -107,7 +101,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm flex items-center group"
+                    className="text-gray-600 hover:text-purple-600 transition-colors duration-200 text-sm flex items-center group"
                   >
                     {link.label}
                     <ExternalLink className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -117,7 +111,7 @@ export function Footer() {
             </ul>
           </motion.div>
 
-          {/* Last Updated */}
+          {/* App Features */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,21 +119,20 @@ export function Footer() {
             className="space-y-4"
           >
             <h3 className="text-lg font-semibold text-gray-900">
-              Last Updated
+              Sanctus Features
             </h3>
             <div className="space-y-2 text-sm text-gray-600">
-              <div>Privacy Policy: December 1, 2024</div>
-              <div>Terms of Service: December 1, 2024</div>
-              <div>Cookie Policy: December 1, 2024</div>
-              <div>All Documents: December 1, 2024</div>
+              <div>🤖 AI Spiritual Mentor</div>
+              <div>💬 Bible Chat with AI</div>
+              <div>📖 Complete Bible Reading</div>
+              <div>🔥 Daily Streak Challenges</div>
+              <div>🎵 Calming Music & Verses</div>
+              <div>🙏 Prayer Tracking</div>
             </div>
             <div className="mt-4">
-              <Link
-                href="/sitemap.xml"
-                className="text-blue-600 hover:text-blue-700 transition-colors duration-200 text-sm"
-              >
-                View Sitemap
-              </Link>
+              <span className="text-xs text-gray-500">
+                Last Updated: December 1, 2024
+              </span>
             </div>
           </motion.div>
         </div>
@@ -152,12 +145,11 @@ export function Footer() {
           className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-sm text-gray-600">
-            © {currentYear} Valoriya. All rights reserved. Faithlingo is a
-            product of Valoriya.
+            © {currentYear} Sanctus. All rights reserved. Empowering spiritual growth through technology.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-xs text-gray-500">
-              Built with ❤️ using Next.js & Tailwind CSS
+              Built with ❤️ for the faithful community
             </span>
           </div>
         </motion.div>
